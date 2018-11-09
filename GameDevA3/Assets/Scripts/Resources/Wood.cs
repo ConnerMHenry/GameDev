@@ -4,4 +4,9 @@ using UnityEngine;
 
 public class Wood : Resource {
 
+    public void OnEnable()
+    {
+        Max = 4;
+        Min = 2;
+    }
 }

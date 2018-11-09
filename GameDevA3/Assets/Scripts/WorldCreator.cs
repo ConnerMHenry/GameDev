@@ -74,7 +74,8 @@ public class WorldCreator : MonoBehaviour
                 int tileIndex = Random.Range(0, tiles.Count);
                 Tile tile = tiles[tileIndex];
 
-                tile.ChildObject = Instantiate(resourceGenerator.CreateResource(biome)) as TileObject;
+                TileObject resource = Instantiate(resourceGenerator.CreateResource(biome)) as TileObject;
+                tile.ChildObject = resource;
                 tiles.RemoveAt(tileIndex);
                 Debug.Log("Resource added at tile " + tile.Name);
             }

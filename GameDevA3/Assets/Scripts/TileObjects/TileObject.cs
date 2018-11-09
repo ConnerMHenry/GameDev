@@ -19,7 +19,8 @@ public class TileObject : MonoBehaviour {
     public void SetTile(Tile newtile)
     {
         this.parentTile = newtile;
-        this.transform.localPosition = parentTile.transform.localPosition;
+        this.transform.parent = newtile.transform;
+        this.transform.localPosition = Vector3.zero;
     }
 
     public void OnDestroy()

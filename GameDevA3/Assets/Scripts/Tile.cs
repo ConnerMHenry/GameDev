@@ -21,7 +21,10 @@ public class Tile : MonoBehaviour {
             return _childObject;
         }
         set {
-            value.SetTile(this);
+            if (value != null)
+            {
+                value.SetTile(this);
+            }
             _childObject = value;
         }
     }
@@ -30,12 +33,6 @@ public class Tile : MonoBehaviour {
     void Start () {
         SetupBiome();
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-
 
     public void OnValidate()
     {
