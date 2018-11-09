@@ -17,6 +17,8 @@ public class WorldCreator : MonoBehaviour
     public Tile[,] tileGrid;
     private Dictionary<Biome, List<Tile>> biomeTiles;
 
+	public CameraController camera;
+
     public void Generate()
     {
         tileGrid = new Tile[gridXLength, gridYLength];
@@ -60,6 +62,7 @@ public class WorldCreator : MonoBehaviour
         }
 
         GenerateResources();
+		camera.boundaries = new Rect(-xIncrement, -yIncrement, (gridXLength * 2 * + 1) * xIncrement, (gridYLength + 1 ) * yIncrement);
     }
 
     public void GenerateResources()
