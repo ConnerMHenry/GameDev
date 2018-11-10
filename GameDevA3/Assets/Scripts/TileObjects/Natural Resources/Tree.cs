@@ -8,6 +8,18 @@ public class Tree : NaturalResource<Wood> {
 
     public override void CreateResource()
     {
+        List<int> xCoordinates = new List<int>();
+        List<int> yCoordinates = new List<int>();
+
+        // Create list of possible x axis values
+        for (int x = xBoundary * -1; x <= xBoundary; x++) { 
+            xCoordinates.Add(x); 
+        }
+        // Create list of possible y axis values
+        for (int y = yBoundary * -1; y <= yBoundary; y++) {
+            yCoordinates.Add(y);
+        }
+
         resource = ScriptableObject.CreateInstance(typeof(Wood)) as Wood;
         treeAssets = new List<GameObject>();
 
@@ -41,15 +53,25 @@ public class Tree : NaturalResource<Wood> {
         // Create the trees
         for (int i = 0; i < treeAmount; i++) {
             // Generate position within bounds
-            float x = Random.Range(xBoundary * -1, xBoundary);
-            float y = Random.Range(yBoundary * -1, yBoundary);
+            int xPos = xCoordinates[Random.Range(0, xCoordinates.Count)];
+            int yPos = yCoordinates[Random.Range(0, yCoordinates.Count)];
+
+            // Remove positions from list so they can't be re-used. Helps with spacing trees
+            xCoordinates.Remove(xPos);
+            yCoordinates.Remove(yPos);
+
+            // Multiply the int positions so that they fit within the scale of -0.30 to 0.30 for both x and y axis
+            float x = ((float)xPos) * boundaryMultiplier;
+            float y = ((float)yPos) * boundaryMultiplier;
 
             // Create SpriteHolder and assign the sprite
             GameObject spriteHolder = Instantiate(SpriteHolderPrefab);
             spriteHolder.GetComponent<SpriteRenderer>().sprite = GenerateSprite();
+
             // Set the local position to this gameobjects and set this object as parent
             spriteHolder.transform.parent = gameObject.transform;
             spriteHolder.transform.localPosition = transform.localPosition;
+
             // Move to generated position
             spriteHolder.transform.Translate(new Vector3(x, y));
 
@@ -58,5 +80,18 @@ public class Tree : NaturalResource<Wood> {
 
         MinAmount = resource.Min * treeAmount;
         MaxAmount = resource.Max * treeAmount;
+
+        LayerSprites();
     } 
+
+    private void LayerSprites() {
+        treeAssets.Sort((GameObject treeOne, GameObject treeTwo) =>
+        {
+            return treeTwo.transform.position.y.CompareTo(treeOne.transform.position.y);
+        });
+
+        for (int i = 0; i < treeAssets.Count; i++) {
+            treeAssets[i].GetComponent<SpriteRenderer>().sortingOrder = i;
+        }
+    }
 }

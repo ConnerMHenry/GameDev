@@ -70,7 +70,7 @@ public class WorldCreator : MonoBehaviour
         foreach (Biome biome in biomeTiles.Keys)
         {
             List<Tile> tiles = biomeTiles[biome];
-            int resourceAmount = resourceGenerator.RandomizeResourceAmount(tiles.Count, 10, 55);
+            int resourceAmount = resourceGenerator.RandomizeResourceAmount(tiles.Count, tiles.Count/4, tiles.Count/3);
 
             for (int i = 0; i < resourceAmount; i++)
             {

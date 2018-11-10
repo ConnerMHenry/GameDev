@@ -20,8 +20,11 @@ public abstract class NaturalResource<R> : TileObject where R: Resource {
     public int Amount { get; protected set; }
 
     // Asset placement values
-    protected float xBoundary = 0.38f;
-    protected float yBoundary = 0.38f;
+
+    // Set x and y boundaries to 5, so that they move in increments of 0.06f to a max of 0.30f
+    protected float boundaryMultiplier = 0.075f;
+    protected int xBoundary = 4;
+    protected int yBoundary = 4;
 
     // Harvest values
     protected HarvestDelegate harvestDelegate;

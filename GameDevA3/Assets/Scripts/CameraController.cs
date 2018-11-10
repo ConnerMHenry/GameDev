@@ -14,7 +14,7 @@ public class CameraController : MonoBehaviour {
 	}
 
 	private Camera cam;
-	private float pan_speed = 5.0f;
+	private float pan_speed = 1.0f;
 
 	public float aspect;
 	public float view_width;

@@ -1,22 +1,18 @@
 ﻿<Properties StartupConfiguration="{67392072-5577-0663-36B7-256C92BDA1BA}|">
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/TileObjects/Natural Resources/Tree.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/WorldCreator.cs">
     <Files>
-      <File FileName="Assets/Scripts/ResourceGenerator.cs" Line="25" Column="9" />
-      <File FileName="Assets/Scripts/TileObjects/Natural Resources/NaturalResource.cs" Line="20" Column="45" />
-      <File FileName="Assets/Scripts/TileObjects/Natural Resources/Tree.cs" Line="9" Column="42" />
-      <File FileName="Assets/Scripts/TileObjects/Natural Resources/Rock.cs" Line="9" Column="9" />
-      <File FileName="Assets/Scripts/Resources/Resource.cs" Line="6" Column="43" />
-      <File FileName="Assets/Scripts/WorldCreator.cs" Line="75" Column="46" />
-      <File FileName="Assets/Scripts/Tile.cs" Line="27" Column="14" />
-      <File FileName="Assets/Scripts/TileObjects/TileObject.cs" Line="23" Column="53" />
+      <File FileName="Assets/Scripts/ResourceGenerator.cs" Line="25" Column="1" />
+      <File FileName="Assets/Scripts/TileObjects/Natural Resources/NaturalResource.cs" Line="23" Column="5" />
+      <File FileName="Assets/Scripts/TileObjects/Natural Resources/Tree.cs" Line="74" Column="13" />
+      <File FileName="Assets/Scripts/TileObjects/Natural Resources/Rock.cs" Line="9" Column="1" />
+      <File FileName="Assets/Scripts/CameraController.cs" Line="14" Column="3" />
+      <File FileName="Assets/Scripts/WorldCreator.cs" Line="73" Column="102" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="/Users/student/Projects/GameDev/GameDevA3/Assets/Scripts/WorldCreator.cs" relfile="Assets/Scripts/WorldCreator.cs" line="72" column="1" />
-    </BreakpointStore>
+    <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MultiItemStartupConfigurations />
