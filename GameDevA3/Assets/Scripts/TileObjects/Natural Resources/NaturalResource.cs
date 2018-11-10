@@ -78,8 +78,15 @@ public abstract class NaturalResource<R> : TileObject where R: Resource {
     /// Method to randomly choose a size for the resource
     /// </summary>
     protected void DetermineSize() {
-        ResourceSize[] sizes = (ResourceSize[]) System.Enum.GetValues(typeof(ResourceSize));
-        Size = sizes[Random.Range(0, sizes.Length)];
+        float bigProbability = Random.value;
+
+        if (bigProbability > .9f) {
+            Size = Random.Range(0, 100) < 90 ? ResourceSize.Big : ResourceSize.Giant;
+        }
+        else {
+            ResourceSize[] sizes = (ResourceSize[])System.Enum.GetValues(typeof(ResourceSize));
+            Size = sizes[Random.Range(0, sizes.Length - 2)];
+        }
     }
 
     /// <summary>

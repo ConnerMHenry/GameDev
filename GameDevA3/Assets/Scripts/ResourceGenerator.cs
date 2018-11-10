@@ -8,7 +8,13 @@ public class ResourceGenerator {
     [System.Serializable]
     public struct BiomeResources {
         public Biome Biome;
-        public List<TileObject> Resources;
+        public List<ResourceWeight> Resources;
+    }
+
+    [System.Serializable]
+    public struct ResourceWeight {
+        public TileObject Resource;
+        public float Weight;
     }
 
     public List<BiomeResources> Resources;
@@ -20,9 +26,33 @@ public class ResourceGenerator {
     public TileObject CreateResource(Biome tileBiome) {
 
         BiomeResources biomeResources = Resources.Find((res) => res.Biome == tileBiome);
-        List<TileObject> resourceList = biomeResources.Resources;
-        int index = Random.Range(0, resourceList.Count);
+        List<ResourceWeight> resourceList = biomeResources.Resources;
 
-        return resourceList[index];
+        return SelectedWeightedResource(resourceList);
+    }
+
+    // Source: https://forum.unity.com/threads/making-random-range-generate-a-value-with-probability.336374/
+    public TileObject SelectedWeightedResource(List<ResourceWeight> resources)
+    {
+        if (resources.Count == 0) throw new System.ArgumentException("At least one range must be included.");
+        if (resources.Count == 1) return resources[0].Resource;
+
+        float total = 0f;
+        for (int i = 0; i < resources.Count; i++) total += resources[i].Weight;
+
+        float r = Random.value;
+        float s = 0f;
+
+        int cnt = resources.Count - 1;
+        for (int i = 0; i < cnt; i++)
+        {
+            s += resources[i].Weight / total;
+            if (s >= r)
+            {
+                return resources[i].Resource;
+            }
+        }
+
+        return resources[cnt].Resource;
     }
 }
