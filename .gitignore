@@ -1,0 +1,7 @@
+
+*.meta
+GameDevA3/.vs/GameDevA3/v15/.suo
+*.lock
+*.ide
+*.ide-shm
+*.ide-wal

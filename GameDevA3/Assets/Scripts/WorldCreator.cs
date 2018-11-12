@@ -62,7 +62,7 @@ public class WorldCreator : MonoBehaviour
         }
 
         GenerateResources();
-		camera.boundaries = new Rect(-xIncrement, -yIncrement, (gridXLength * 2 * + 1.0f) * xIncrement, (gridYLength + 1.0f ) * yIncrement);
+		camera.boundaries = new Rect(- 6 * xIncrement, -2 * yIncrement, (gridXLength * 2 + 13.0f) * xIncrement, (gridYLength + 3.0f ) * yIncrement);
     }
 
     public void GenerateResources()
