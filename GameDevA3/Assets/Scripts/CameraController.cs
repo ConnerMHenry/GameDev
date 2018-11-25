@@ -15,7 +15,7 @@ public class CameraController : MonoBehaviour {
 
 	private Camera cam;
 	private float pan_speed = 0.15f;
-
+	private float minSize = 1.0f;
 	public float aspect;
 	public float view_width;
 	public float view_height;
@@ -64,6 +64,10 @@ public class CameraController : MonoBehaviour {
 		if (Input.GetKey(KeyCode.LeftShift))
 		{
 			cam.orthographicSize -= 0.05f;
+			if (cam.orthographicSize < minSize)
+			{
+				cam.orthographicSize = minSize;
+			}
 		}
 
 		viewport = new Rect(transform.localPosition.x - view_width / 2.0f, transform.localPosition.y - view_height / 2.0f, view_width, view_height);
