@@ -64,14 +64,11 @@
     <Compile Include="Assets\Scripts\Biome.cs" />
     <Compile Include="Assets\Scripts\BiomeOptions.cs" />
     <Compile Include="Assets\Scripts\CameraController.cs" />
-    <Compile Include="Assets\Scripts\ItemBarController.cs" />
-    <Compile Include="Assets\Scripts\ItemSlotController.cs" />
     <Compile Include="Assets\Scripts\ResourceCollection.cs" />
     <Compile Include="Assets\Scripts\ResourceGenerator.cs" />
     <Compile Include="Assets\Scripts\Resources\LivingRequirements.cs" />
     <Compile Include="Assets\Scripts\Resources\Resource.cs" />
-    <Compile Include="Assets\Scripts\Resources\Stone.cs" />
-    <Compile Include="Assets\Scripts\Resources\Wood.cs" />
+    <Compile Include="Assets\Scripts\Resources\ResourceType.cs" />
     <Compile Include="Assets\Scripts\Tile.cs" />
     <Compile Include="Assets\Scripts\TileObjects\Buildings\Building.cs" />
     <Compile Include="Assets\Scripts\TileObjects\Buildings\WindMill.cs" />
@@ -82,6 +79,9 @@
     <Compile Include="Assets\Scripts\TileObjects\Natural Resources\Tree.cs" />
     <Compile Include="Assets\Scripts\TileObjects\TileObject.cs" />
     <Compile Include="Assets\Scripts\TileObjects\TileUI.cs" />
+    <Compile Include="Assets\Scripts\UI\ItemBarController.cs" />
+    <Compile Include="Assets\Scripts\UI\ItemSlotController.cs" />
+    <Compile Include="Assets\Scripts\UI\ResourceOptions.cs" />
     <Compile Include="Assets\Scripts\WorldCreator.cs" />
     <Compile Include="Assets\Scripts\WorldManager.cs" />
     <None Include="Assets\Spritesheets\Buildings\hexagonBuildings_sheet.xml" />

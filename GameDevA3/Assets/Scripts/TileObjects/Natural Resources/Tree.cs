@@ -20,7 +20,7 @@ public class Tree : NaturalResource {
             yCoordinates.Add(y);
         }
 
-        resource = ScriptableObject.CreateInstance(typeof(Wood)) as Wood;
+        resource = new Resource(ResourceType.Wood);
         treeAssets = new List<GameObject>();
 
         int treeAmount = 0;

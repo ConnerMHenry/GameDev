@@ -1,15 +1,13 @@
 ﻿<Properties StartupConfiguration="{67392072-5577-0663-36B7-256C92BDA1BA}|">
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/TileObjects/TileUI.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/TileObjects/Natural Resources/NaturalResource.cs">
     <Files>
-      <File FileName="Assets/Scripts/TileObjects/Natural Resources/Tree.cs" Line="53" Column="40" />
-      <File FileName="Assets/Scripts/TileObjects/Natural Resources/Rock.cs" Line="48" Column="22" />
-      <File FileName="Assets/Scripts/TileObjects/TileObject.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/TileObjects/Highlightable.cs" Line="18" Column="1" />
-      <File FileName="Assets/Scripts/TileObjects/Natural Resources/NaturalResource.cs" Line="52" Column="98" />
-      <File FileName="Assets/Scripts/Tile.cs" Line="44" Column="69" />
-      <File FileName="Assets/Scripts/ItemBarController.cs" Line="41" Column="35" />
-      <File FileName="Assets/Scripts/TileObjects/TileUI.cs" Line="19" Column="8" />
+      <File FileName="Assets/Scripts/UI/ResourceOptions.cs" Line="9" Column="26" />
+      <File FileName="Assets/Scripts/UI/ItemSlotController.cs" Line="21" Column="10" />
+      <File FileName="Assets/Scripts/Resources/ResourceType.cs" Line="6" Column="43" />
+      <File FileName="Assets/Scripts/Resources/Resource.cs" Line="25" Column="23" />
+      <File FileName="Assets/Scripts/UI/ItemBarController.cs" Line="57" Column="46" />
+      <File FileName="Assets/Scripts/TileObjects/Natural Resources/NaturalResource.cs" Line="68" Column="44" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

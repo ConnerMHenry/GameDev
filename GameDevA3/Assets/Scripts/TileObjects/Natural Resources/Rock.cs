@@ -8,7 +8,7 @@ public class Rock : NaturalResource {
     {
         harvestTime = 3;
 
-        resource = ScriptableObject.CreateInstance(typeof(Stone)) as Stone;
+        resource = new Resource(ResourceType.Stone);
         MinAmount = resource.Min;
         MaxAmount = resource.Max;
 

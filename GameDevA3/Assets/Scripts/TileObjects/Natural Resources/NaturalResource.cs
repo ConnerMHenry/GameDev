@@ -64,15 +64,8 @@ public abstract class NaturalResource : TileObject {
     }
 
     protected void HarvestDone() {
-        //List<Resource> resources = new List<Resource>();
-        //System.Type underlyingType = resource.GetType();
+        ItemBarController.main.Add(resource, Amount);
 
-        //for (int i = 0; i < Amount; i++)
-        //{
-        //    resources.Add(ScriptableObject.CreateInstance(underlyingType) as underlyingType);
-        //}
-
-        //harvestDelegate(resources);
         parentTile.RemoveProgressBar();
         Destroy(gameObject);
     }
