@@ -22,18 +22,22 @@ public static class HighlightManager {
 		if (current_target == null)
 		{
 			current_target = target;
-		}
+        }
 		else if (target == current_target && highlight.activeSelf)
 		{
 			highlight.SetActive(false);
+            current_target.IsHighlighted = false;
 			return;
 		}
 
+        current_target.IsHighlighted = false;
+        target.IsHighlighted = true;
 		current_target.terrainImage.sortingOrder = 0;
 		current_target = target;
 		current_target.terrainImage.sortingOrder = 2;
 		highlight.transform.parent = target.gameObject.transform;
 		highlight.transform.localPosition = Vector3.zero;
 		highlight.SetActive(true);
-	}
+
+    }
 }

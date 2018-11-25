@@ -51,8 +51,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1420157068353162}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 8, y: 8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4637014380815746}
@@ -113,6 +113,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3142c66329ff46d49c25b51fd3e3849, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ProgressBarPreFab: {fileID: 114758923527871434, guid: 46b5068fa73d94b8f874c3f2c82a8838,
+    type: 2}
   Name: 
   biomeOptions:
     grassBiome: {fileID: 21300046, guid: ec4557c3fb6dd409e86308df61771b3a, type: 3}

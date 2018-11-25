@@ -5,6 +5,8 @@ using UnityEngine.U2D;
 
 public class Tile : MonoBehaviour {
 
+    public TileUI ProgressBarPreFab;
+
     public string Name;
     public BiomeOptions biomeOptions;
     public Biome Biome = Biome.Grasslands;
@@ -29,10 +31,45 @@ public class Tile : MonoBehaviour {
         }
     }
 
+    private bool isHighlighted = false;
+    public bool IsHighlighted {
+        get {
+            return isHighlighted;
+        }
+
+        set {
+
+            if (value) {
+                if (_childObject is NaturalResource) {
+                    ((NaturalResource)_childObject).OnHarvest(null);
+                }
+            }
+
+            isHighlighted = value;
+        }
+    }
+
+    public TileUI ProgressBar { get; protected set; }
+
     // Use this for initialization
     void Start () {
         SetupBiome();
 	}
+
+    public void CreateProgressBar() {
+        ProgressBar = Instantiate(ProgressBarPreFab) as TileUI;
+        if (ProgressBar != null) {
+            ProgressBar.SetPosition(this);
+        }
+    }
+
+    public void RemoveProgressBar() {
+        if (ProgressBar != null)
+        {
+            Destroy(ProgressBar.gameObject);
+            ProgressBar = null;
+        }
+    }
 
     public void OnValidate()
     {

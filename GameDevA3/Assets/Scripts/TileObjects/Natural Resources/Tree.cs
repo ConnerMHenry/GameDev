@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Tree : NaturalResource<Wood> {
+public class Tree : NaturalResource {
 
     private List<GameObject> treeAssets;
 
@@ -49,6 +49,8 @@ public class Tree : NaturalResource<Wood> {
             default:
                 break;
         }
+
+        harvestTime = treeAmount * 1.5f;
 
         // Create the trees
         for (int i = 0; i < treeAmount; i++) {

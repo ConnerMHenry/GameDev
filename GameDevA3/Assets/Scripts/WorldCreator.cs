@@ -5,6 +5,8 @@ using UnityEngine;
 public class WorldCreator : MonoBehaviour
 {
 
+    public bool running;
+
     public Tile TilePrefab;
     public ResourceGenerator resourceGenerator;
 
@@ -21,6 +23,10 @@ public class WorldCreator : MonoBehaviour
 
     public void Generate()
     {
+        if (!running) {
+            return;
+        }
+
         tileGrid = new Tile[gridXLength, gridYLength];
         biomeTiles = new Dictionary<Biome, List<Tile>>();
 

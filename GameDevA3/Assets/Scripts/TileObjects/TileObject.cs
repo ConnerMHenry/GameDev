@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class TileObject : MonoBehaviour {
 
-
     protected Tile parentTile;
 	// Use this for initialization
 	void Start () {
@@ -25,6 +24,10 @@ public class TileObject : MonoBehaviour {
 
     public void OnDestroy()
     {
-        parentTile.ChildObject = null;
+        if (parentTile.ChildObject == this)
+        {
+            parentTile.ChildObject = null;
+        }
+
     }
 }

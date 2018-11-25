@@ -1,9 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public abstract class NaturalResource<R> : TileObject where R: Resource {
-    public delegate void HarvestDelegate(List<R> resources);
+public abstract class NaturalResource : TileObject {
+    public delegate void HarvestDelegate(List<Resource> resources);
 
     public enum ResourceSize {
         Small, Medium, Big, Giant
@@ -13,7 +14,7 @@ public abstract class NaturalResource<R> : TileObject where R: Resource {
     public ResourceSize Size { get; protected set; }
 
     public List<Sprite> spriteOptions;
-    public R resource;
+    public Resource resource;
     public int PeopleRequired { get; protected set; }
     public int MaxAmount { get; protected set; }
     public int MinAmount { get; protected set; }
@@ -34,7 +35,6 @@ public abstract class NaturalResource<R> : TileObject where R: Resource {
 
     // Use this for initialization
     void Start () {
-        //amount = Random.Range(MinAmount, MaxAmount);
         isHarvesting = false;
 
         harvestTime = PeopleRequired * 3;
@@ -49,7 +49,7 @@ public abstract class NaturalResource<R> : TileObject where R: Resource {
 	void Update() {
         if (isHarvesting) {
             timeHarvesting += Time.deltaTime;
-
+            parentTile.ProgressBar.GetComponent<Slider>().value = (timeHarvesting / harvestTime);
             if (timeHarvesting > harvestTime) {
                 HarvestDone();
             }
@@ -59,18 +59,21 @@ public abstract class NaturalResource<R> : TileObject where R: Resource {
     public void OnHarvest(HarvestDelegate harvestDelegate) {
         this.harvestDelegate = harvestDelegate;
         isHarvesting = true;
+
+        parentTile.CreateProgressBar();
     }
 
     protected void HarvestDone() {
-        List<R> resources = new List<R>();
-        System.Type underlyingType = resource.GetType();
-        for (int i = 0; i < Amount; i++)
-        {
-            resources.Add(ScriptableObject.CreateInstance(underlyingType) as R);
-        }
+        //List<Resource> resources = new List<Resource>();
+        //System.Type underlyingType = resource.GetType();
 
-        harvestDelegate(resources);
+        //for (int i = 0; i < Amount; i++)
+        //{
+        //    resources.Add(ScriptableObject.CreateInstance(underlyingType) as underlyingType);
+        //}
 
+        //harvestDelegate(resources);
+        parentTile.RemoveProgressBar();
         Destroy(gameObject);
     }
 
