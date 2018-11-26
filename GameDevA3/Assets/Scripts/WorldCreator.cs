@@ -27,7 +27,15 @@ public class WorldCreator : MonoBehaviour
             return;
         }
 
-        tileGrid = new Tile[gridXLength, gridYLength];
+		int [,] biomeMap = NoiseGenerator.GenerateBiomeMap(gridXLength, gridYLength, 5);
+		Dictionary<int, Biome> biomesByValue = new Dictionary<int, Biome>();
+		biomesByValue.Add(0, Biome.RedDesert);
+		biomesByValue.Add(1, Biome.Dirt);
+		biomesByValue.Add(2, Biome.Grasslands);
+		biomesByValue.Add(3, Biome.Rocky);
+		biomesByValue.Add(4, Biome.Desert);
+
+		tileGrid = new Tile[gridXLength, gridYLength];
         biomeTiles = new Dictionary<Biome, List<Tile>>();
 
         bool indent = false;
@@ -39,7 +47,7 @@ public class WorldCreator : MonoBehaviour
 
                 Tile tile = Instantiate(TilePrefab) as Tile;
                 tile.Name = "(" + x + ", " + y + ")";
-                tile.Biome = Biome.Grasslands;
+                tile.Biome = biomesByValue[biomeMap[x,y]];
                 float xInc = xIncrement * 2 * x;
                 float yInc = yIncrement * y;
 
@@ -69,6 +77,7 @@ public class WorldCreator : MonoBehaviour
 
         GenerateResources();
 		camera.boundaries = new Rect(- 6 * xIncrement, -2 * yIncrement, (gridXLength * 2 + 13.0f) * xIncrement, (gridYLength + 3.0f ) * yIncrement);
+		
     }
 
     public void GenerateResources()
@@ -84,9 +93,10 @@ public class WorldCreator : MonoBehaviour
                 Tile tile = tiles[tileIndex];
 
                 TileObject resource = Instantiate(resourceGenerator.CreateResource(biome)) as TileObject;
+				resource.gameObject.SetActive(true);
                 tile.ChildObject = resource;
                 tiles.RemoveAt(tileIndex);
-                Debug.Log("Resource added at tile " + tile.Name);
+                // Debug.Log("Resource added at tile " + tile.Name);
             }
         }
     }

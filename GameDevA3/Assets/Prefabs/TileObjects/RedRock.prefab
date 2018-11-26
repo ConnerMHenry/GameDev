@@ -1,0 +1,64 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1105892929372910}
+  m_IsPrefabAsset: 1
+--- !u!1 &1105892929372910
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4971764639222884}
+  - component: {fileID: 114570338181888580}
+  m_Layer: 0
+  m_Name: RedRock
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4971764639222884
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1105892929372910}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.176, y: 0.07377529, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114570338181888580
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1105892929372910}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9a54f4a6a6aa4573b69e220b1c6d1d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SpriteHolderPrefab: {fileID: 1520646675860446, guid: de11c824fa7f743d0ba3c60c4189c3d9,
+    type: 2}
+  spriteOptions:
+  - {fileID: 21300014, guid: fa88b5253f2d8434987848687c6e3ca8, type: 3}
+  - {fileID: 21300010, guid: fa88b5253f2d8434987848687c6e3ca8, type: 3}
+  - {fileID: 21300002, guid: fa88b5253f2d8434987848687c6e3ca8, type: 3}
+  - {fileID: 21300004, guid: fa88b5253f2d8434987848687c6e3ca8, type: 3}
+  - {fileID: 21300012, guid: fa88b5253f2d8434987848687c6e3ca8, type: 3}
+  - {fileID: 21300008, guid: fa88b5253f2d8434987848687c6e3ca8, type: 3}
+  - {fileID: 21300006, guid: fa88b5253f2d8434987848687c6e3ca8, type: 3}
+  - {fileID: 21300000, guid: fa88b5253f2d8434987848687c6e3ca8, type: 3}

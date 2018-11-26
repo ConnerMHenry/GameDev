@@ -1905,7 +1905,7 @@ MonoBehaviour:
     type: 2}
   resourceGenerator:
     Resources:
-    - Biome: 0
+    - Biome: 1
       Resources:
       - Resource: {fileID: 114152204868161446, guid: 0383303191d77426698c136fe73cc5c3,
           type: 2}
@@ -1913,14 +1913,38 @@ MonoBehaviour:
       - Resource: {fileID: 114570338181888580, guid: 87a52549f1a174d168642c68199da32c,
           type: 2}
         Weight: 20
-    - Biome: 1
-      Resources: []
+    - Biome: 0
+      Resources:
+      - Resource: {fileID: 114152204868161446, guid: 0383303191d77426698c136fe73cc5c3,
+          type: 2}
+        Weight: 80
+      - Resource: {fileID: 114570338181888580, guid: 5bffb17bd0b94ef4ba777fd17dc52412,
+          type: 2}
+        Weight: 25
+      - Resource: {fileID: 114570338181888580, guid: 87a52549f1a174d168642c68199da32c,
+          type: 2}
+        Weight: 35
     - Biome: 2
-      Resources: []
+      Resources:
+      - Resource: {fileID: 114570338181888580, guid: 5bffb17bd0b94ef4ba777fd17dc52412,
+          type: 2}
+        Weight: 35
     - Biome: 3
-      Resources: []
+      Resources:
+      - Resource: {fileID: 114570338181888580, guid: 87a52549f1a174d168642c68199da32c,
+          type: 2}
+        Weight: 30
+      - Resource: {fileID: 114570338181888580, guid: 5bffb17bd0b94ef4ba777fd17dc52412,
+          type: 2}
+        Weight: 30
+      - Resource: {fileID: 114570338181888580, guid: 9b0142894cc94de4ca04dc809f3351d9,
+          type: 2}
+        Weight: 30
     - Biome: 4
-      Resources: []
+      Resources:
+      - Resource: {fileID: 114570338181888580, guid: 5bffb17bd0b94ef4ba777fd17dc52412,
+          type: 2}
+        Weight: 25
   gridXLength: 50
   gridYLength: 50
   xIncrement: 0.605
@@ -2805,6 +2829,7 @@ MonoBehaviour:
   tileText: {fileID: 0}
   peopleRequiredText: {fileID: 0}
   resourcesArea: {fileID: 0}
+  buildButton: {fileID: 0}
   addButton: {fileID: 0}
   removeButton: {fileID: 0}
   ResourceRowPrefab: {fileID: 0}
@@ -3052,6 +3077,7 @@ MonoBehaviour:
   tileText: {fileID: 1281541684}
   peopleRequiredText: {fileID: 1475602764}
   resourcesArea: {fileID: 2102369775}
+  buildButton: {fileID: 0}
   addButton: {fileID: 1801804736}
   removeButton: {fileID: 988526797}
   ResourceRowPrefab: {fileID: 114410469666015368, guid: 598aac932d5894c2fa44e9ce1e8b6811,
@@ -3110,6 +3136,7 @@ MonoBehaviour:
   tileText: {fileID: 0}
   peopleRequiredText: {fileID: 0}
   resourcesArea: {fileID: 0}
+  buildButton: {fileID: 0}
   addButton: {fileID: 0}
   removeButton: {fileID: 0}
   ResourceRowPrefab: {fileID: 0}
@@ -3312,6 +3339,10 @@ Prefab:
     - target: {fileID: 1420157068353162, guid: cbc81f2aa07474629a5d676bc29a8fd3, type: 2}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1420157068353162, guid: cbc81f2aa07474629a5d676bc29a8fd3, type: 2}
+      propertyPath: m_Name
+      value: Debug
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cbc81f2aa07474629a5d676bc29a8fd3, type: 2}
