@@ -1,17 +1,8 @@
 ﻿<Properties StartupConfiguration="{67392072-5577-0663-36B7-256C92BDA1BA}|">
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Resources/LivingRequirements.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/TileObjects/Natural Resources/NaturalResource.cs">
     <Files>
       <File FileName="Assets/Scripts/TileObjects/Natural Resources/NaturalResource.cs" Line="12" Column="5" />
-      <File FileName="Assets/Scripts/TileObjects/Natural Resources/Tree.cs" Line="54" Column="39" />
-      <File FileName="Assets/Scripts/Tile.cs" Line="111" Column="35" />
-      <File FileName="Assets/Scripts/TileObjects/TileObject.cs" Line="8" Column="47" />
-      <File FileName="Assets/Scripts/UI/BuildingWindowController.cs" Line="7" Column="36" />
-      <File FileName="Assets/Scripts/TileObjects/Buildings/Building.cs" Line="12" Column="42" />
-      <File FileName="Assets/Scripts/Resources/ResourceType.cs" Line="6" Column="58" />
-      <File FileName="Assets/Scripts/TileObjects/Buildings/Commodity.cs" Line="5" Column="36" />
-      <File FileName="Assets/Scripts/TileObjects/Buildings/ProductionBuilding.cs" Line="5" Column="45" />
-      <File FileName="Assets/Scripts/Resources/LivingRequirements.cs" Line="6" Column="32" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

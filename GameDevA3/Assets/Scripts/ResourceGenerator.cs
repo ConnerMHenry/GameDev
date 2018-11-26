@@ -34,8 +34,14 @@ public class ResourceGenerator {
     // Source: https://forum.unity.com/threads/making-random-range-generate-a-value-with-probability.336374/
     public TileObject SelectedWeightedResource(List<ResourceWeight> resources)
     {
-        if (resources.Count == 0) throw new System.ArgumentException("At least one range must be included.");
-        if (resources.Count == 1) return resources[0].Resource;
+		if (resources.Count == 0)
+		{
+			throw new System.ArgumentException("At least one range must be included.");
+		}
+		if (resources.Count == 1)
+		{
+			return resources[0].Resource;
+		}
 
         float total = 0f;
         for (int i = 0; i < resources.Count; i++) total += resources[i].Weight;

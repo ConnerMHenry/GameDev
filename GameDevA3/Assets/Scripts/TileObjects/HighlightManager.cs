@@ -11,11 +11,8 @@ public static class HighlightManager {
 	{
 		if (highlight == null)
 		{
-			Debug.Log("a");
 			Object hex = Resources.Load("HexHighlighter");
-			Debug.Log("b");
 			Object obj = GameObject.Instantiate(hex);
-			Debug.Log("c");
 			highlight = (GameObject)obj;
 		}
 
