@@ -15,6 +15,25 @@ public abstract class NaturalResource : TileObject {
     public List<Sprite> spriteOptions;
     public Resource resource;
     public int PeopleRequired { get; protected set; }
+
+    private int peopleWorking = 0;
+    public int PeopleWorking {
+        get {
+            return peopleWorking;
+        }
+
+        set {
+            if (value <= PeopleRequired)
+            {
+                isHarvesting = value == PeopleRequired;
+
+                if (value == PeopleRequired && parentTile.ProgressBar == null) {
+                    parentTile.CreateProgressBar();
+                }
+                peopleWorking = value;
+            }
+        }
+    }
     public int MaxAmount { get; protected set; }
     public int MinAmount { get; protected set; }
     public int Amount { get; protected set; }
@@ -39,6 +58,8 @@ public abstract class NaturalResource : TileObject {
         timeHarvesting = 0.0f;
         DetermineSize();
 
+        PeopleRequired = 1;
+
         CreateResource();
         Amount = Random.Range(MinAmount, MaxAmount);
 	}
@@ -54,15 +75,18 @@ public abstract class NaturalResource : TileObject {
         }
 	}
 
-    public void StartHarvest() {
-        isHarvesting = true;
-        parentTile.CreateProgressBar();
-    }
-
     protected void HarvestDone() {
         ItemBarController.main.Add(resource, Amount);
 
         parentTile.RemoveProgressBar();
+
+
+        if (parentTile.IsHighlighted)
+        {
+            Tile tile = parentTile;
+            tile.ChildObject = null;
+            TileInfoController.main.CurrentTile = tile;
+        }
         Destroy(gameObject);
     }
 

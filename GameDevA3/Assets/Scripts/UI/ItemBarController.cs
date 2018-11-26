@@ -58,4 +58,6 @@ public class ItemBarController : MonoBehaviour {
             }
         }
     }
+
+
 }

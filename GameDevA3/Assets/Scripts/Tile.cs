@@ -7,7 +7,20 @@ public class Tile : MonoBehaviour {
 
     public TileUI ProgressBarPreFab;
 
-    public string Name;
+    private string displayName = "Dustlands";
+    public string Name {
+        get
+        {
+            if (ChildObject != null) {
+                return ChildObject.Name;
+            }
+
+            return name;
+        }
+        set {
+            name = value;
+        }
+    }
     public BiomeOptions biomeOptions;
     public Biome Biome = Biome.Grasslands;
     public SpriteRenderer terrainImage;
@@ -75,26 +88,32 @@ public class Tile : MonoBehaviour {
         switch(Biome) {
             case Biome.Grasslands:
                 terrainImage.sprite = options.grassBiome;
+                Name = "Grass Plain";
                 break;
 
             case Biome.Dirt:
                 terrainImage.sprite = options.dirtBiome;
+                Name = "Dirt Field";
                 break;
 
             case Biome.Rocky:
                 terrainImage.sprite = options.rockBiome;
+                Name = "Bedrock";
                 break;
 
             case Biome.Desert:
                 terrainImage.sprite = options.desertBiome;
+                Name = "Desert Dune";
                 break;
 
             case Biome.RedDesert:
                 terrainImage.sprite = options.redDesertBiome;
+                Name = "Dustlands";
                 break;
 
             case Biome.Debug:
                 terrainImage.sprite = options.debugBiome;
+                Name = "Debug";
                 break;
         }
     }

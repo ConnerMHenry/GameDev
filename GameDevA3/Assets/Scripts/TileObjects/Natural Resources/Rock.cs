@@ -17,6 +17,8 @@ public class Rock : NaturalResource {
         {
             case ResourceSize.Small:
                 rockIndex = Random.Range(0, 4);
+                Name = "Small Stone";
+                PeopleRequired = 1;
                 break;
 
             case ResourceSize.Medium:
@@ -24,6 +26,9 @@ public class Rock : NaturalResource {
                 MinAmount *= 3;
                 MaxAmount *= 3;
                 harvestTime *= 1.5f;
+
+                Name = "Sizable Rock";
+                PeopleRequired = 4;
                 break;
 
             case ResourceSize.Big:
@@ -31,6 +36,9 @@ public class Rock : NaturalResource {
                 MinAmount *= 6;
                 MaxAmount *= 6;
                 harvestTime *= 3.0f;
+
+                Name = "Boulder";
+                PeopleRequired = 6;
                 break;
 
             case ResourceSize.Giant:
@@ -38,6 +46,9 @@ public class Rock : NaturalResource {
                 MinAmount *= 9;
                 MaxAmount *= 9;
                 harvestTime *= 5f;
+
+                Name = "Mountain";
+                PeopleRequired = 8;
                 break;
 
             default:
@@ -46,7 +57,6 @@ public class Rock : NaturalResource {
 
         float x = 0f;
         float y = 0f;
-
 
         x = Random.Range(xBoundary * -1, xBoundary) * boundaryMultiplier;
         y = Random.Range(yBoundary * -1, yBoundary) * boundaryMultiplier;

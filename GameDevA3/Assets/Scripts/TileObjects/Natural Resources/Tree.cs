@@ -30,20 +30,28 @@ public class Tree : NaturalResource {
             // Small size only has one tree
             case ResourceSize.Small:
                 treeAmount = 1;
+                PeopleRequired = 1;
+                Name = "Tree";
                 break;
             // Medium size only has two-three trees
             case ResourceSize.Medium:
                 treeAmount = Random.Range(2, 4);
+                PeopleRequired = treeAmount == 4 ? 3 : 2;
+                Name = "Trees";
                 break;
 
             // Big size only has four-five trees
             case ResourceSize.Big:
                 treeAmount = Random.Range(4, 6);
+                PeopleRequired = 4;
+                Name = "Forest";
                 break;
             
             // Giant size can have 6-8 trees
             case ResourceSize.Giant:
                 treeAmount = Random.Range(6, 9);
+                PeopleRequired = treeAmount <= 7 ? 5 : 6;
+                Name = "Dense Forest";
                 break;
 
             default:

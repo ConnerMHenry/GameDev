@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class TileObject : MonoBehaviour {
 
+
+    public string Name { get; protected set; }
     protected Tile parentTile;
 	// Use this for initialization
 	void Start () {
