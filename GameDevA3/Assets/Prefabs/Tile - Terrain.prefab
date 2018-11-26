@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 114870543106958134}
   - component: {fileID: 60299619311645950}
   m_Layer: 0
-  m_Name: Tile - Terrain
+  m_Name: Debug
   m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -115,7 +115,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ProgressBarPreFab: {fileID: 114758923527871434, guid: 46b5068fa73d94b8f874c3f2c82a8838,
     type: 2}
-  Name: 
   biomeOptions:
     grassBiome: {fileID: 21300046, guid: ec4557c3fb6dd409e86308df61771b3a, type: 3}
     desertBiome: {fileID: 21300126, guid: ec4557c3fb6dd409e86308df61771b3a, type: 3}

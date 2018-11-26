@@ -64,14 +64,14 @@
     <Compile Include="Assets\Scripts\Biome.cs" />
     <Compile Include="Assets\Scripts\BiomeOptions.cs" />
     <Compile Include="Assets\Scripts\CameraController.cs" />
-    <Compile Include="Assets\Scripts\ResourceCollection.cs" />
     <Compile Include="Assets\Scripts\ResourceGenerator.cs" />
     <Compile Include="Assets\Scripts\Resources\LivingRequirements.cs" />
     <Compile Include="Assets\Scripts\Resources\Resource.cs" />
     <Compile Include="Assets\Scripts\Resources\ResourceType.cs" />
     <Compile Include="Assets\Scripts\Tile.cs" />
     <Compile Include="Assets\Scripts\TileObjects\Buildings\Building.cs" />
-    <Compile Include="Assets\Scripts\TileObjects\Buildings\WindMill.cs" />
+    <Compile Include="Assets\Scripts\TileObjects\Buildings\Commodity.cs" />
+    <Compile Include="Assets\Scripts\TileObjects\Buildings\ProductionBuilding.cs" />
     <Compile Include="Assets\Scripts\TileObjects\Highlightable.cs" />
     <Compile Include="Assets\Scripts\TileObjects\HighlightManager.cs" />
     <Compile Include="Assets\Scripts\TileObjects\Natural Resources\NaturalResource.cs" />
@@ -79,6 +79,7 @@
     <Compile Include="Assets\Scripts\TileObjects\Natural Resources\Tree.cs" />
     <Compile Include="Assets\Scripts\TileObjects\TileObject.cs" />
     <Compile Include="Assets\Scripts\TileObjects\TileUI.cs" />
+    <Compile Include="Assets\Scripts\UI\BuildingWindowController.cs" />
     <Compile Include="Assets\Scripts\UI\ItemBarController.cs" />
     <Compile Include="Assets\Scripts\UI\ItemSlotController.cs" />
     <Compile Include="Assets\Scripts\UI\ResourceOptions.cs" />
