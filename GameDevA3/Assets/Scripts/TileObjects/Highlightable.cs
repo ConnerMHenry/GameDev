@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class Highlightable : MonoBehaviour {
 
@@ -14,6 +16,10 @@ public class Highlightable : MonoBehaviour {
 	// Update is called once per frame
 	private void OnMouseDown()
 	{
-		HighlightManager.Highlight(tile);
+        if (!EventSystem.current.IsPointerOverGameObject())
+        {
+            //Do your thing.
+            HighlightManager.Highlight(tile);
+        }
 	}
 }

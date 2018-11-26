@@ -27,6 +27,7 @@ public static class HighlightManager {
 		{
 			highlight.SetActive(false);
             current_target.IsHighlighted = false;
+            TileInfoController.main.CurrentTile = null;
 			return;
 		}
 
@@ -38,6 +39,6 @@ public static class HighlightManager {
 		highlight.transform.parent = target.gameObject.transform;
 		highlight.transform.localPosition = Vector3.zero;
 		highlight.SetActive(true);
-
+        TileInfoController.main.CurrentTile = current_target;
     }
 }

@@ -82,6 +82,7 @@
     <Compile Include="Assets\Scripts\UI\ItemBarController.cs" />
     <Compile Include="Assets\Scripts\UI\ItemSlotController.cs" />
     <Compile Include="Assets\Scripts\UI\ResourceOptions.cs" />
+    <Compile Include="Assets\Scripts\UI\TileInfoController.cs" />
     <Compile Include="Assets\Scripts\WorldCreator.cs" />
     <Compile Include="Assets\Scripts\WorldManager.cs" />
     <None Include="Assets\Spritesheets\Buildings\hexagonBuildings_sheet.xml" />

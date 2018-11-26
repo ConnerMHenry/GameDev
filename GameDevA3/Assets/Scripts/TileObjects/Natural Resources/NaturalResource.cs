@@ -4,7 +4,6 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public abstract class NaturalResource : TileObject {
-    public delegate void HarvestDelegate(List<Resource> resources);
 
     public enum ResourceSize {
         Small, Medium, Big, Giant
@@ -28,7 +27,6 @@ public abstract class NaturalResource : TileObject {
     protected int yBoundary = 4;
 
     // Harvest values
-    protected HarvestDelegate harvestDelegate;
     protected bool isHarvesting;
     protected float harvestTime;
     protected float timeHarvesting;
@@ -56,10 +54,8 @@ public abstract class NaturalResource : TileObject {
         }
 	}
 
-    public void OnHarvest(HarvestDelegate harvestDelegate) {
-        this.harvestDelegate = harvestDelegate;
+    public void StartHarvest() {
         isHarvesting = true;
-
         parentTile.CreateProgressBar();
     }
 

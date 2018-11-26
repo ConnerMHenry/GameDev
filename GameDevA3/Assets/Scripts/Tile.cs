@@ -38,13 +38,6 @@ public class Tile : MonoBehaviour {
         }
 
         set {
-
-            if (value) {
-                if (_childObject is NaturalResource) {
-                    ((NaturalResource)_childObject).OnHarvest(null);
-                }
-            }
-
             isHighlighted = value;
         }
     }
