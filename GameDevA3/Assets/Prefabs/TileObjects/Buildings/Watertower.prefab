@@ -73,6 +73,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Watertower
   Description: A water tower used for storing water. Provides 5 water.
+  totalProductionTime: 10
   totalConstructionTime: 3
   buildingCosts:
   - resource: 0

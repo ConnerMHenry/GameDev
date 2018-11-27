@@ -51,7 +51,7 @@ Animator:
   m_GameObject: {fileID: 1123961361013542}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 52eef181e82f24840a7333e766bdd4eb, type: 2}
+  m_Controller: {fileID: 9100000, guid: 06eb0de8db30d4d659373c4c5518cb73, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -73,7 +73,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Refinery
   Description: Refinery forge used to refine iron into steel.
-  totalProductionTime: 0
+  totalProductionTime: 10
   totalConstructionTime: 5
   buildingCosts:
   - resource: 0
@@ -90,13 +90,16 @@ MonoBehaviour:
     chance: 0.9
   - resource: 5
     amount: 2
-    chance: 0.3
-  resourceNeeds: 0200000001000000
+    chance: 0.5
+  - resource: 6
+    amount: 1
+    chance: 0.2
+  resourceNeeds: 020000000100000003000000
   providedNeeds: []
   requiredNeeds:
   - providedRequirements: 3
     amount: 1
-  buildingAnimator: {fileID: 0}
+  buildingAnimator: {fileID: 95057911483261402}
 --- !u!212 &212335886359305748
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -23,7 +23,7 @@ MonoBehaviour:
   m_MinSize: {x: 479, y: 442}
   m_MaxSize: {x: 8004, y: 8042}
   vertical: 0
-  controlID: 48729
+  controlID: 50020
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -126,7 +126,7 @@ MonoBehaviour:
   m_MinSize: {x: 202, y: 442}
   m_MaxSize: {x: 4002, y: 8042}
   vertical: 1
-  controlID: 48730
+  controlID: 50021
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -474,19 +474,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Prefabs/TileObjects/Buildings
+    - Assets/Prefabs/TileObjects
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Prefabs/TileObjects/Buildings
+  - Assets/Prefabs/TileObjects
   m_LastFoldersGridSize: -1
   m_LastProjectPath: /Users/connerhenry/Projects/GameDev/GameDevA3
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: ba2a0000
-    m_LastClickedID: 10938
+    m_SelectedIDs: 902e0000
+    m_LastClickedID: 11920
     m_ExpandedIDs: 00000000062a0000902e0000b02e0000023000001c3000001a310000c831000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -540,9 +540,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 6e300000
-    m_LastClickedInstanceID: 12398
-    m_HadKeyboardFocusLastEvent: 0
+    m_SelectedInstanceIDs: 782a0000
+    m_LastClickedInstanceID: 10872
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c62300000a0c0000c0090000ae2b0000dc2d00007a3b0000743b0000ce2c0000d23f00003a2e000000000000042d00002c2a000082300000ce2f00009e2e0000e22a0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -615,10 +615,10 @@ MonoBehaviour:
     y: 0
     width: 459
     height: 850
-  m_MinSize: {x: 277, y: 271}
-  m_MaxSize: {x: 4002, y: 8021}
+  m_MinSize: {x: 277, y: 292}
+  m_MaxSize: {x: 4002, y: 8042}
   vertical: 1
-  controlID: 48645
+  controlID: 50039
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -637,8 +637,8 @@ MonoBehaviour:
     y: 0
     width: 459
     height: 422
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -671,7 +671,7 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 6e300000
+    m_SelectedIDs: 782a0000
     m_LastClickedID: 0
     m_ExpandedIDs: aeecc6ffb076cfffb276cfff9a4fd8ff5c91d8ff9892e8fffcfdedff0475f7ff7286f8ff7caffaff3805fcffe4fbffff000000003c320000b0320000c4320000d6320000e0320000d8e90000b2ea0000deea000036eb0000
     m_RenameOverlay:

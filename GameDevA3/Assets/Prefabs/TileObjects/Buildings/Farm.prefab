@@ -193,6 +193,7 @@ MonoBehaviour:
   Name: Farm
   Description: A small farm stead, providing food for your workers. Provides 2 shelter,
     and 12 food.
+  totalProductionTime: 10
   totalConstructionTime: 5
   buildingCosts:
   - resource: 0

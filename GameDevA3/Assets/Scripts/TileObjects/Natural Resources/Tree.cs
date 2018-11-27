@@ -90,6 +90,7 @@ public class Tree : NaturalResource {
 
         resource.Min = resource.Min * treeAmount;
         resource.Max = resource.Max * treeAmount;
+        resource.ReCalculateAmount();
 
         LayerSprites();
     } 

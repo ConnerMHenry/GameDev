@@ -26,6 +26,5 @@ public abstract class TileObject : MonoBehaviour {
         {
             parentTile.ChildObject = null;
         }
-
     }
 }

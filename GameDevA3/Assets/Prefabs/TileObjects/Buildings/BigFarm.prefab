@@ -283,11 +283,12 @@ MonoBehaviour:
   Name: Big Farm
   Description: An entire plain, converted to farm land through the use of the fertilizing
     powers of the mysterious crystals...
+  totalProductionTime: 20
   totalConstructionTime: 8
   buildingCosts:
   - resource: 0
     amount: 35
-  - resource: 6
+  - resource: 7
     amount: 1
   resourceOutput: []
   resourceNeeds: 

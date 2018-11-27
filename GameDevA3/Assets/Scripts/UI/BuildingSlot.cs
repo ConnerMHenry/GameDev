@@ -37,7 +37,7 @@ public class BuildingSlot : MonoBehaviour {
 
         foreach (Building.BuildingCost cost in requiredResources) {
             int currentAmount = ItemBarController.main.AmountOf(cost.resource);
-            if (cost.amount >= currentAmount) {
+            if (cost.amount > currentAmount) {
                 IsAvailable = false;
                 return;
             }

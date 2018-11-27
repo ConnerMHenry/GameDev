@@ -111,7 +111,7 @@ Animator:
   m_GameObject: {fileID: 1217043232996826}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 52eef181e82f24840a7333e766bdd4eb, type: 2}
+  m_Controller: {fileID: 9100000, guid: 06eb0de8db30d4d659373c4c5518cb73, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -134,7 +134,7 @@ MonoBehaviour:
   Name: Powerplant
   Description: An advnaced system, which harnesses the power of the mysterious crystals.
     Provides 50 energy.
-  totalProductionTime: 0
+  totalProductionTime: 60
   totalConstructionTime: 10
   buildingCosts:
   - resource: 5
@@ -157,7 +157,7 @@ MonoBehaviour:
     amount: 20
   - providedRequirements: 3
     amount: 10
-  buildingAnimator: {fileID: 0}
+  buildingAnimator: {fileID: 95680309807137072}
 --- !u!212 &212214539928346658
 SpriteRenderer:
   m_ObjectHideFlags: 1

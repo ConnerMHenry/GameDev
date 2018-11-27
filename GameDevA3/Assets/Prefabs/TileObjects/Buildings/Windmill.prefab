@@ -122,7 +122,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Windmill
   Description: A humble windmill, provides energy for your people.
-  totalProductionTime: 0
+  totalProductionTime: 10
   totalConstructionTime: 3
   buildingCosts:
   - resource: 0
