@@ -43,6 +43,9 @@ public class ItemSlotController : MonoBehaviour {
             UpdateAmountText(value);
 
             itemAmount = value;
+            if (itemAmount > 999) {
+                itemAmount = 999;
+            }
         }
     }
 
