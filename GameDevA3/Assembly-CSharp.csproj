@@ -114,6 +114,7 @@
     <Compile Include="Assets\Scripts\TileObjects\Natural Resources\Tree.cs" />
     <Compile Include="Assets\Scripts\TileObjects\TileObject.cs" />
     <Compile Include="Assets\Scripts\TileObjects\TileUI.cs" />
+    <Compile Include="Assets\Scripts\UI\BuildingSlot.cs" />
     <Compile Include="Assets\Scripts\UI\BuildingWindowController.cs" />
     <Compile Include="Assets\Scripts\UI\ItemBarController.cs" />
     <Compile Include="Assets\Scripts\UI\ItemSlotController.cs" />
