@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4909533336527630}
   - component: {fileID: 114464562740018016}
   - component: {fileID: 212319381636002324}
+  - component: {fileID: 95696908791022002}
   m_Layer: 0
   m_Name: Windmill
   m_TagString: Untagged
@@ -72,6 +73,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &95696908791022002
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1315200853956838}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 06eb0de8db30d4d659373c4c5518cb73, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!95 &95753005014573458
 Animator:
   serializedVersion: 3
@@ -103,6 +122,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Windmill
   Description: A humble windmill, provides energy for your people.
+  totalProductionTime: 0
   totalConstructionTime: 3
   buildingCosts:
   - resource: 0
@@ -113,7 +133,7 @@ MonoBehaviour:
   - providedRequirements: 0
     amount: 5
   requiredNeeds: []
-  buildingAnimator: {fileID: 0}
+  buildingAnimator: {fileID: 95696908791022002}
 --- !u!212 &212319381636002324
 SpriteRenderer:
   m_ObjectHideFlags: 1
