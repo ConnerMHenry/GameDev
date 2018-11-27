@@ -3,5 +3,5 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public enum LivingRequirements {
-    Energy, Water, Food, Shelter
+    Energy, Water, Food, People
 }

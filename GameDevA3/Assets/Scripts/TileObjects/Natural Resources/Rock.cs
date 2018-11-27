@@ -8,9 +8,7 @@ public class Rock : NaturalResource {
     {
         harvestTime = 3;
 
-        resource = new Resource(ResourceType.Stone);
-        MinAmount = resource.Min;
-        MaxAmount = resource.Max;
+        Resource resource = resources.Find((obj) => obj.ResourceType == ResourceType.Stone);
 
         int rockIndex = 0;
         switch (Size)
@@ -23,8 +21,8 @@ public class Rock : NaturalResource {
 
             case ResourceSize.Medium:
                 rockIndex = Random.Range(4, 6);
-                MinAmount *= 3;
-                MaxAmount *= 3;
+                resource.Min *= 3;
+                resource.Min *= 3;
                 harvestTime *= 1.5f;
 
                 Name = "Sizable Rock";
@@ -33,8 +31,8 @@ public class Rock : NaturalResource {
 
             case ResourceSize.Big:
                 rockIndex = Random.Range(6, 8);
-                MinAmount *= 6;
-                MaxAmount *= 6;
+                resource.Min *= 6;
+                resource.Min *= 6;
                 harvestTime *= 3.0f;
 
                 Name = "Boulder";
@@ -43,8 +41,8 @@ public class Rock : NaturalResource {
 
             case ResourceSize.Giant:
                 rockIndex = spriteOptions.Count - 1;
-                MinAmount *= 9;
-                MaxAmount *= 9;
+                resource.Min *= 9;
+                resource.Min *= 9;
                 harvestTime *= 5f;
 
                 Name = "Mountain";

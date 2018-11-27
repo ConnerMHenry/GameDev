@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Resource
 {
-    public ResourceType ResourceType { get; protected set; }
+    public ResourceType ResourceType;
 
     public Resource(ResourceType resource) {
         this.ResourceType = resource;
@@ -19,6 +19,16 @@ public class Resource
                 Min = 3;
                 break;
 
+            case ResourceType.Iron:
+                Min = 1;
+                Max = 3;
+                break;
+
+            case ResourceType.Coal:
+                Min = 1;
+                Max = 5;
+                break;
+
             case ResourceType.Crytsal:
                 Max = 5;
                 Min = 5;
@@ -26,6 +36,11 @@ public class Resource
         }
     }
 
-    public int Max { get; protected set; }
-    public int Min { get; protected set; }
+    public int Max;
+    public int Min;
+    public int Amount;
+
+    public void ReCalculateAmount() {
+        Amount = Random.Range(Min, Max);
+    }
 }

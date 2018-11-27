@@ -13,11 +13,22 @@ public abstract class NaturalResource : TileObject {
     public ResourceSize Size { get; protected set; }
 
     public List<Sprite> spriteOptions;
-    public Resource resource;
-    public int PeopleRequired { get; protected set; }
+    public List<ResourcePossibility> possibleResources;
+    protected List<Resource> resources;
+    public override List<Resource> Resources {
+        get {
+            return resources;
+        }
+    }
 
-    private int peopleWorking = 0;
-    public int PeopleWorking {
+    [System.Serializable]
+    public class ResourcePossibility {
+        public ResourceType type;
+        [Range(0.1f, 1.0f)]
+        public float chanceOfOccuring;
+    }
+
+    public override int PeopleWorking {
         get {
             return peopleWorking;
         }
@@ -34,9 +45,6 @@ public abstract class NaturalResource : TileObject {
             }
         }
     }
-    public int MaxAmount { get; protected set; }
-    public int MinAmount { get; protected set; }
-    public int Amount { get; protected set; }
 
     // Asset placement values
 
@@ -60,9 +68,15 @@ public abstract class NaturalResource : TileObject {
 
         PeopleRequired = 1;
 
+        resources = new List<Resource>();
+        foreach(ResourcePossibility possibility in possibleResources) {
+            if (Random.value <= possibility.chanceOfOccuring) {
+                resources.Add(new Resource(possibility.type));
+            }
+        }
+
         CreateResource();
-        Amount = Random.Range(MinAmount, MaxAmount);
-	}
+    }
 	
 	// Update is called once per frame
 	void Update() {
@@ -76,7 +90,11 @@ public abstract class NaturalResource : TileObject {
 	}
 
     protected void HarvestDone() {
-        ItemBarController.main.Add(resource, Amount);
+
+        foreach (Resource resource in resources)
+        {
+            ItemBarController.main.Add(resource.ResourceType, resource.Amount);
+        }
 
         parentTile.RemoveProgressBar();
 

@@ -96,7 +96,6 @@ public class WorldCreator : MonoBehaviour
 				resource.gameObject.SetActive(true);
                 tile.ChildObject = resource;
                 tiles.RemoveAt(tileIndex);
-                // Debug.Log("Resource added at tile " + tile.Name);
             }
         }
     }

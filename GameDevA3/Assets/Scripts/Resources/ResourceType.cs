@@ -3,5 +3,5 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public enum ResourceType {
-    Wood, Stone, Steel, Gold, Coal, Brick, Crytsal, None
+    Wood, Stone, Coal, Iron, Steel, Brick, Gold, Crytsal, None
 }

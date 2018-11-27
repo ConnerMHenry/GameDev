@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 114870543106958134}
   - component: {fileID: 60299619311645950}
   m_Layer: 0
-  m_Name: Tile - Terrain
+  m_Name: Debug
   m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -22,7 +22,7 @@ public class TileInfoController : MonoBehaviour {
     public List<ResourceRowController> resourceRows;
 
     private Tile currentTile;
-    private NaturalResource currentResource;
+    private TileObject currentObject;
 
     public Tile CurrentTile {
         get {
@@ -49,10 +49,16 @@ public class TileInfoController : MonoBehaviour {
 
         tileText.text = tile.Name;
 
-        if (tile.ChildObject is NaturalResource) {
-            currentResource = (NaturalResource)tile.ChildObject;
+        if (tile.ChildObject != null) {
+            currentObject = tile.ChildObject;
             UpdatePeopleAmount();
-            CreateResourceRow(currentResource.resource.ResourceType, currentResource.Amount);
+            foreach (Resource resource in currentObject.Resources)
+            {
+                if (resource.Amount != 0)
+                {
+                    CreateResourceRow(resource.ResourceType, resource.Amount);
+                }
+            }
             buildButton.interactable = false;
         }
         else {
@@ -107,25 +113,42 @@ public class TileInfoController : MonoBehaviour {
 	}
 
     public void AssignPersonToResource() {
+<<<<<<< HEAD
         if (currentResource.PeopleWorking < currentResource.PeopleRequired && LivingResourcesManager.GetWorkers(1)) {
             currentResource.PeopleWorking += 1;
+=======
+
+        if (currentObject != null && currentObject.PeopleWorking < currentObject.PeopleRequired) {
+            currentObject.PeopleWorking += 1;
+>>>>>>> master
         }
 
         UpdatePeopleAmount();
     }
 
     public void RemovePersonFromResource() {
+<<<<<<< HEAD
         if (currentResource.PeopleWorking > 0) {
             currentResource.PeopleWorking -= 1;
 			LivingResourcesManager.AddWorkers(1);
+=======
+        if (currentObject.PeopleWorking > 0) {
+            currentObject.PeopleWorking -= 1;
+>>>>>>> master
         }
 
         UpdatePeopleAmount();
     }
 
     private void UpdatePeopleAmount() {
-        peopleRequiredText.text = currentResource.PeopleWorking + "/" + currentResource.PeopleRequired;
-        removeButton.interactable = currentResource.PeopleWorking > 0;
-        addButton.interactable = currentResource.PeopleWorking < currentResource.PeopleRequired;
+        peopleRequiredText.text = currentObject.PeopleWorking + "/" + currentObject.PeopleRequired;
+        removeButton.interactable = currentObject.PeopleWorking > 0;
+        addButton.interactable = currentObject.PeopleWorking < currentObject.PeopleRequired;
+    }
+
+    public void ShowBuildWindow() {
+        if (!BuildingWindowController.main.IsVisible) {
+            BuildingWindowController.main.Show();
+        }
     }
 }
