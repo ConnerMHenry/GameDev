@@ -53,6 +53,8 @@ public class Rock : NaturalResource {
                 break;
         }
 
+		resource.ReCalculateAmount();
+
         float x = 0f;
         float y = 0f;
 
