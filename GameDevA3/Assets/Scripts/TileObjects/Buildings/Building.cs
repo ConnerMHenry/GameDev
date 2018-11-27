@@ -146,6 +146,15 @@ public class Building : TileObject {
         parentTile.RemoveProgressBar();
         isBuilt = true;
 
+		foreach(LifeNeeds nedward in providedNeeds)
+		{
+			if (nedward.providedRequirements == LivingRequirements.People)
+			{
+				LivingResourcesManager.AddLivingSpace(nedward.amount);
+				LivingResourcesManager.AddWorkers(nedward.amount);
+			}
+		}
+
         if (parentTile.IsHighlighted) {
             TileInfoController.main.CurrentTile = parentTile;
         }
