@@ -202,6 +202,8 @@ public class Building : TileObject {
 					}
 				}
 
+				Debug.Log("Getting up keep for: " + PeopleRequired);
+				LivingResourcesManager.GetUpKeep(PeopleRequired);
 			}
             //Provide the needs to needs manager.
         }

@@ -128,6 +128,7 @@ public static class LivingResourcesManager {
 		{
 			current_food -= required_amount;
 			current_water -= required_amount;
+			UpdateAllCounters();
 			return true;
 		}
 		else
