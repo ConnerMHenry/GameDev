@@ -105,6 +105,7 @@ public abstract class NaturalResource : TileObject {
             tile.ChildObject = null;
             TileInfoController.main.CurrentTile = tile;
         }
+		LivingResourcesManager.AddWorkers(peopleWorking);
         Destroy(gameObject);
     }
 

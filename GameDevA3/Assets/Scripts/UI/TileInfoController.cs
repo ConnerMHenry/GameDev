@@ -113,8 +113,7 @@ public class TileInfoController : MonoBehaviour {
 	}
 
     public void AssignPersonToResource() {
-
-        if (currentObject != null && currentObject.PeopleWorking < currentObject.PeopleRequired) {
+        if (currentObject != null && currentObject.PeopleWorking < currentObject.PeopleRequired && LivingResourcesManager.GetWorkers(1)) {
             currentObject.PeopleWorking += 1;
         }
 
@@ -124,9 +123,10 @@ public class TileInfoController : MonoBehaviour {
     public void RemovePersonFromResource() {
         if (currentObject.PeopleWorking > 0) {
             currentObject.PeopleWorking -= 1;
-        }
+			LivingResourcesManager.AddWorkers(1);
+		}
 
-        UpdatePeopleAmount();
+		UpdatePeopleAmount();
     }
 
     private void UpdatePeopleAmount() {
