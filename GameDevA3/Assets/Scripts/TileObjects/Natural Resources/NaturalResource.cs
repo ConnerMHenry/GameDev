@@ -76,7 +76,7 @@ public abstract class NaturalResource : TileObject {
 	}
 
     protected void HarvestDone() {
-        ItemBarController.main.Add(resource, Amount);
+        ItemBarController.main.Add(resource.ResourceType, Amount);
 
         parentTile.RemoveProgressBar();
 

@@ -18,17 +18,35 @@ public class BuildingSlot : MonoBehaviour {
         }
         set {
             ToggleAvailability(value);
-            isAvailable = true;
+            isAvailable = value;
         }
     }
 
     public void Start()
     {
         CheckAvailability();
+        //building = Instantiate(building) as Building;
+        //building.SetActive(false);
     }
 
-    private void CheckAvailability() {
+    public void CheckAvailability() {
+        List<Building.BuildingCost> requiredResources = building.buildingCosts;
 
+        if (ItemBarController.main == null) {
+            IsAvailable = false;
+            return;
+        }
+
+        foreach (Building.BuildingCost cost in requiredResources) {
+            int currentAmount = ItemBarController.main.AmountOf(cost.resource);
+            Debug.Log(Name + " has " + currentAmount + " " + cost.resource.ToString() + " and needs " + currentAmount);
+            if (cost.amount >= currentAmount) {
+                IsAvailable = false;
+                return;
+            }
+        }
+
+        IsAvailable = true;
     }
 
     private void ToggleAvailability(bool available) {

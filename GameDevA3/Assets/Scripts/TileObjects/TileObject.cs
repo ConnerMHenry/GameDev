@@ -5,7 +5,7 @@ using UnityEngine;
 public class TileObject : MonoBehaviour {
 
 
-    public string Name { get; protected set; }
+    public string Name;
     protected Tile parentTile;
 	// Use this for initialization
 	void Start () {

@@ -71,8 +71,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be4044bed10674119b5ef4b5430c4b3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Name: Refinery
   Description: Refinery forge used to refine iron into steel.
-  BuildingName: Refinery
+  totalConstructionTime: 5
   buildingCosts:
   - resource: 0
     amount: 4
@@ -91,6 +92,7 @@ MonoBehaviour:
   requiredNeeds:
   - providedRequirements: 3
     amount: 1
+  buildingAnimator: {fileID: 0}
 --- !u!212 &212335886359305748
 SpriteRenderer:
   m_ObjectHideFlags: 1

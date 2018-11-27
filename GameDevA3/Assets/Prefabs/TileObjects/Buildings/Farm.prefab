@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4912854534936636}
   - component: {fileID: 114193924842115194}
   - component: {fileID: 212221780938839436}
+  - component: {fileID: 95527428292824884}
   m_Layer: 0
   m_Name: Farm
   m_TagString: Untagged
@@ -160,6 +161,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &95527428292824884
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1046978354840318}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 06eb0de8db30d4d659373c4c5518cb73, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &114193924842115194
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -171,9 +190,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e3487b30abd44befbaf457f77b8315a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Name: Farm
   Description: A small farm stead, providing food for your workers. Provides 2 shelter,
     and 12 food.
-  BuildingName: Farm
+  totalConstructionTime: 5
   buildingCosts:
   - resource: 0
     amount: 25
@@ -191,6 +211,7 @@ MonoBehaviour:
     amount: 2
   - providedRequirements: 3
     amount: 2
+  buildingAnimator: {fileID: 95527428292824884}
 --- !u!212 &212221780938839436
 SpriteRenderer:
   m_ObjectHideFlags: 1

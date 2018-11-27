@@ -260,7 +260,7 @@ Animator:
   m_GameObject: {fileID: 1794321529669808}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 52eef181e82f24840a7333e766bdd4eb, type: 2}
+  m_Controller: {fileID: 9100000, guid: 06eb0de8db30d4d659373c4c5518cb73, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -280,11 +280,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e37d7a08c3416414cb7b4343988c075b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Description: An entire plain, converted to farm land
-  BuildingName: Powerplant
+  Name: Big Farm
+  Description: An entire plain, converted to farm land through the use of the fertilizing
+    powers of the mysterious crystals...
+  totalConstructionTime: 8
   buildingCosts:
   - resource: 0
-    amount: 15
+    amount: 35
+  - resource: 6
+    amount: 1
   resourceOutput: []
   resourceNeeds: 
   providedNeeds:
@@ -295,6 +299,7 @@ MonoBehaviour:
     amount: 15
   - providedRequirements: 1
     amount: 20
+  buildingAnimator: {fileID: 95204354709778238}
 --- !u!212 &212304599166596150
 SpriteRenderer:
   m_ObjectHideFlags: 1

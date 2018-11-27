@@ -127,4 +127,10 @@ public class TileInfoController : MonoBehaviour {
         removeButton.interactable = currentResource.PeopleWorking > 0;
         addButton.interactable = currentResource.PeopleWorking < currentResource.PeopleRequired;
     }
+
+    public void ShowBuildWindow() {
+        if (!BuildingWindowController.main.IsVisible) {
+            BuildingWindowController.main.Show();
+        }
+    }
 }

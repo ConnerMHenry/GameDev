@@ -101,15 +101,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e3487b30abd44befbaf457f77b8315a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Name: Windmill
   Description: A humble windmill, provides energy for your people.
-  BuildingName: Windmill
+  totalConstructionTime: 3
   buildingCosts:
   - resource: 0
     amount: 15
   resourceOutput: []
+  resourceNeeds: 
   providedNeeds:
   - providedRequirements: 0
     amount: 5
+  requiredNeeds: []
+  buildingAnimator: {fileID: 0}
 --- !u!212 &212319381636002324
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4114612028699854}
   - component: {fileID: 114191550681347030}
   - component: {fileID: 212337135657115234}
+  - component: {fileID: 95275765775820890}
   m_Layer: 0
   m_Name: Tent
   m_TagString: Untagged
@@ -41,6 +42,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &95275765775820890
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1125689349549096}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 06eb0de8db30d4d659373c4c5518cb73, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &114191550681347030
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -52,15 +71,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e3487b30abd44befbaf457f77b8315a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Name: Tent
   Description: A modest tent, with enough room for 2 people. Adds 2 extra workers.
-  BuildingName: Tent
+  totalConstructionTime: 3
   buildingCosts:
   - resource: 0
     amount: 5
   resourceOutput: []
+  resourceNeeds: 
   providedNeeds:
   - providedRequirements: 3
     amount: 2
+  requiredNeeds: []
+  buildingAnimator: {fileID: 95275765775820890}
 --- !u!212 &212337135657115234
 SpriteRenderer:
   m_ObjectHideFlags: 1

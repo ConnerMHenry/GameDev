@@ -131,9 +131,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e37d7a08c3416414cb7b4343988c075b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Name: Powerplant
   Description: An advnaced system, which harnesses the power of the mysterious crystals.
     Provides 50 energy.
-  BuildingName: Powerplant
+  totalConstructionTime: 10
   buildingCosts:
   - resource: 5
     amount: 20
@@ -143,8 +144,6 @@ MonoBehaviour:
     amount: 3
   - resource: 6
     amount: 5
-  - resource: 0
-    amount: 0
   resourceOutput: []
   resourceNeeds: 06000000
   providedNeeds:
@@ -157,6 +156,7 @@ MonoBehaviour:
     amount: 20
   - providedRequirements: 3
     amount: 10
+  buildingAnimator: {fileID: 0}
 --- !u!212 &212214539928346658
 SpriteRenderer:
   m_ObjectHideFlags: 1

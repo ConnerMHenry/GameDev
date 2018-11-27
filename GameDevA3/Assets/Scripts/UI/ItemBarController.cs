@@ -50,13 +50,26 @@ public class ItemBarController : MonoBehaviour {
             itemSlots.Add(itemSlot);
         }
     }
+
+    public int AmountOf(ResourceType type) {
+
+        foreach (ItemSlotController itemSlot in itemSlots) {
+            if (itemSlot.ResourceType == type) {
+                return itemSlot.ItemCount;
+            }
+        }
+
+        return 0;
+    }
 	
-    public void Add(Resource resource, int amount) {
+    public void Add(ResourceType resource, int amount) {
         foreach(ItemSlotController itemSlot in itemSlots) {
-            if (itemSlot.ResourceType == resource.ResourceType) {
+            if (itemSlot.ResourceType == resource) {
                 itemSlot.ItemCount += amount;
             }
         }
+        // Update Building window availability on the different building options
+        BuildingWindowController.main.UpdateSlots();
     }
 
 
