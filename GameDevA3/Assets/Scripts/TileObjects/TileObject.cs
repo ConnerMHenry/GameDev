@@ -2,20 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TileObject : MonoBehaviour {
+public abstract class TileObject : MonoBehaviour {
 
 
     public string Name;
     protected Tile parentTile;
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+
+    public int PeopleRequired { get; protected set; }
+    protected int peopleWorking = 0;
+    public abstract int PeopleWorking { get; set; }
+    public abstract List<Resource> Resources { get; }
 
     public void SetTile(Tile newtile)
     {

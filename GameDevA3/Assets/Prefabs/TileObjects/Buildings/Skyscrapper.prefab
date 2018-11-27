@@ -74,15 +74,16 @@ MonoBehaviour:
   Name: Skyscrapper
   Description: A behemoth of a structure, a Skycrapper can house 50 people. Adds 50
     workers.
+  totalProductionTime: 0
   totalConstructionTime: 8
   buildingCosts:
   - resource: 0
     amount: 30
   - resource: 5
     amount: 40
-  - resource: 2
+  - resource: 4
     amount: 6
-  - resource: 3
+  - resource: 6
     amount: 3
   resourceOutput: []
   resourceNeeds: 

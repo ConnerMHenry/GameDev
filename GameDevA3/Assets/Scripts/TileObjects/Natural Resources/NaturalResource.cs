@@ -14,8 +14,12 @@ public abstract class NaturalResource : TileObject {
 
     public List<Sprite> spriteOptions;
     public List<ResourcePossibility> possibleResources;
-    public List<Resource> resources { get; protected set; }
-    public int PeopleRequired { get; protected set; }
+    protected List<Resource> resources;
+    public override List<Resource> Resources {
+        get {
+            return resources;
+        }
+    }
 
     [System.Serializable]
     public class ResourcePossibility {
@@ -24,8 +28,7 @@ public abstract class NaturalResource : TileObject {
         public float chanceOfOccuring;
     }
 
-    private int peopleWorking = 0;
-    public int PeopleWorking {
+    public override int PeopleWorking {
         get {
             return peopleWorking;
         }

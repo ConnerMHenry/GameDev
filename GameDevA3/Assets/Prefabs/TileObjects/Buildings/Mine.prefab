@@ -73,24 +73,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Mine
   Description: Basic mining facility, used for producing coal, iron, and stone.
+  totalProductionTime: 0
   totalConstructionTime: 5
   buildingCosts:
   - resource: 0
     amount: 10
   - resource: 1
     amount: 5
-  - resource: 7
+  - resource: 2
     amount: 2
   resourceOutput:
   - resource: 1
     amount: 3
     chance: 0.6
-  - resource: 4
+  - resource: 2
     amount: 5
     chance: 0.7
-  - resource: 7
+  - resource: 3
     amount: 1
-    chance: 0.3
+    chance: 0.4
   resourceNeeds: 
   providedNeeds: []
   requiredNeeds:

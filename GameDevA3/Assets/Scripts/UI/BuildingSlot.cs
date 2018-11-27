@@ -25,8 +25,6 @@ public class BuildingSlot : MonoBehaviour {
     public void Start()
     {
         CheckAvailability();
-        //building = Instantiate(building) as Building;
-        //building.SetActive(false);
     }
 
     public void CheckAvailability() {
@@ -39,7 +37,6 @@ public class BuildingSlot : MonoBehaviour {
 
         foreach (Building.BuildingCost cost in requiredResources) {
             int currentAmount = ItemBarController.main.AmountOf(cost.resource);
-            Debug.Log(Name + " has " + currentAmount + " " + cost.resource.ToString() + " and needs " + currentAmount);
             if (cost.amount >= currentAmount) {
                 IsAvailable = false;
                 return;

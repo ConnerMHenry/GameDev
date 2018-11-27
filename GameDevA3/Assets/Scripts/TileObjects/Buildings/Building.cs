@@ -20,12 +20,9 @@ public class Building : TileObject {
     private bool isBuilding = false;
     private bool isBuilt = false;
 
-    public int PeopleRequired { get; protected set; }
     public bool IsProducing { get; protected set; }
 
-
-    private int peopleWorking = 0;
-    public int PeopleWorking {
+    public override int PeopleWorking {
         get {
             return peopleWorking;
         }
@@ -39,6 +36,19 @@ public class Building : TileObject {
 
                 peopleWorking = value;
             }
+        }
+    }
+
+    public override List<Resource> Resources {
+        get {
+            List<Resource> resources = new List<Resource>();
+            foreach (ResourceProduction production in resourceOutput) {
+                Resource resource = new Resource(production.resource);
+                resource.Amount = production.amount;
+                resources.Add(resource);
+            }
+
+            return resources;
         }
     }
 
@@ -76,7 +86,6 @@ public class Building : TileObject {
         isBuilding = true;
         buildingAnimator.Play("BuildingAnimation");
         parentTile.CreateProgressBar();
-        //parentTile.ProgressBar.GetComponent<Slider>().
     }
 
     public void Start()
@@ -97,18 +106,36 @@ public class Building : TileObject {
             }
         }
 
-        if (isBuilt && IsProducing) {
+        bool hasResources = true;
+
+        foreach (ResourceType need in resourceNeeds)
+        {
+            hasResources = ItemBarController.main.AmountOf(need) > 0;
+
+            if (!hasResources){
+                break;
+            }
+        }
+
+        if (isBuilt && IsProducing && hasResources) {
             productionTime += Time.deltaTime;
             parentTile.ProgressBar.GetComponent<Slider>().value = productionTime / totalProductionTime;
 
+            // Check somewhere that resourceNeeds are met
             if (productionTime >= totalProductionTime) {
                 productionTime = 0.0f;
 
                 foreach(ResourceProduction production in resourceOutput) {
-                    ItemBarController.main.Add(production.resource, production.amount);
+                    if (Random.value <= production.chance)
+                    {
+                        ItemBarController.main.Add(production.resource, production.amount);
+                    }
+                }
+
+                foreach(ResourceType need in resourceNeeds) {
+                    ItemBarController.main.Add(need, -1);
                 }
             }
-
             //Provide the needs to needs manager.
         }
     }   
@@ -118,32 +145,9 @@ public class Building : TileObject {
         buildingAnimator.Play("BuildingIdle");
         parentTile.RemoveProgressBar();
         isBuilt = true;
+
+        if (parentTile.IsHighlighted) {
+            TileInfoController.main.CurrentTile = parentTile;
+        }
     }
-
-    //public int howMuchRequirements;
-    //public LivingRequirements providedRequirements;
-    //public int peopleRequired;
-    //public float requirementTime;
-    //public ResourceCollection collection;
-    //public bool IsOperating {
-    //    get {
-    //        return peopleAssigned == peopleRequired;
-    //    }
-    //}
-
-    //private float requirementTimer = 0.0f;
-    //private int peopleAssigned = 0;
-
-
-    //public void Update()
-    //{
-    //    if (peopleAssigned == peopleRequired) {
-    //        requirementTimer += Time.deltaTime;
-
-    //        if (requirementTimer >= requirementTime) {
-    //            collection.UpdateResource(providedRequirements, howMuchRequirements);
-    //            requirementTimer = 0.0f;
-    //        }
-    //    }
-    //}
 }

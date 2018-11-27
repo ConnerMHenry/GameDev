@@ -34,13 +34,11 @@ public class Resource
                 Min = 5;
                 break;
         }
+
+        Amount = Random.Range(Min, Max);
     }
 
     public int Max;
     public int Min;
-    public int Amount {
-        get {
-            return Random.Range(Min, Max);
-        }
-    }
+    public int Amount;
 }
