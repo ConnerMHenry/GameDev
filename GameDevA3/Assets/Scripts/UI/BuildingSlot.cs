@@ -22,6 +22,15 @@ public class BuildingSlot : MonoBehaviour {
         }
     }
 
+    public void Start()
+    {
+        CheckAvailability();
+    }
+
+    private void CheckAvailability() {
+
+    }
+
     private void ToggleAvailability(bool available) {
         spriteImage.color = available ? Color.white : disabledColor;
     }
