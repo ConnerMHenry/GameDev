@@ -109,6 +109,7 @@
     <Compile Include="Assets\Scripts\TileObjects\Buildings\ProductionBuilding.cs" />
     <Compile Include="Assets\Scripts\TileObjects\Highlightable.cs" />
     <Compile Include="Assets\Scripts\TileObjects\HighlightManager.cs" />
+    <Compile Include="Assets\Scripts\TileObjects\Natural Resources\Crystal.cs" />
     <Compile Include="Assets\Scripts\TileObjects\Natural Resources\NaturalResource.cs" />
     <Compile Include="Assets\Scripts\TileObjects\Natural Resources\Rock.cs" />
     <Compile Include="Assets\Scripts\TileObjects\Natural Resources\Tree.cs" />

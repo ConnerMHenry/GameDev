@@ -1,12 +1,17 @@
 ﻿<Properties StartupConfiguration="{67392072-5577-0663-36B7-256C92BDA1BA}|">
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Resources/Resource.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/UI/BuildingSlot.cs">
     <Files>
       <File FileName="Assets/Scripts/TileObjects/Buildings/Building.cs" Line="115" Column="1" />
       <File FileName="Assets/Scripts/UI/TileInfoController.cs" Line="54" Column="34" />
       <File FileName="Assets/Scripts/UI/ResourceRowController.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/TileObjects/Natural Resources/Tree.cs" Line="23" Column="91" />
-      <File FileName="Assets/Scripts/Resources/Resource.cs" Line="43" Column="23" />
+      <File FileName="Assets/Scripts/TileObjects/Natural Resources/Tree.cs" Line="14" Column="49" />
+      <File FileName="Assets/Scripts/Resources/Resource.cs" Line="44" Column="41" />
+      <File FileName="Assets/Scripts/TileObjects/Natural Resources/Rock.cs" Line="26" Column="22" />
+      <File FileName="Assets/Scripts/TileObjects/Natural Resources/Crystal.cs" Line="10" Column="26" />
+      <File FileName="Assets/Scripts/TileObjects/Natural Resources/NaturalResource.cs" Line="58" Column="21" />
+      <File FileName="Assets/Scripts/TileObjects/TileObject.cs" Line="28" Column="10" />
+      <File FileName="Assets/Scripts/UI/BuildingSlot.cs" Line="38" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
@@ -16,6 +21,7 @@
       <Breakpoint file="/Users/connerhenry/Projects/GameDev/GameDevA3/Assets/Scripts/UI/BuildingSlot.cs" relfile="Assets/Scripts/UI/BuildingSlot.cs" line="39" column="58" />
       <Breakpoint file="/Users/connerhenry/Projects/GameDev/GameDevA3/Assets/Scripts/UI/BuildingSlot.cs" relfile="Assets/Scripts/UI/BuildingSlot.cs" line="38" column="1" />
       <Breakpoint file="/Users/connerhenry/Projects/GameDev/GameDevA3/Assets/Scripts/UI/BuildingSlot.cs" relfile="Assets/Scripts/UI/BuildingSlot.cs" line="40" column="1" />
+      <Breakpoint file="/Users/connerhenry/Projects/GameDev/GameDevA3/Assets/Scripts/TileObjects/Natural Resources/NaturalResource.cs" relfile="Assets/Scripts/TileObjects/Natural Resources/NaturalResource.cs" line="84" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

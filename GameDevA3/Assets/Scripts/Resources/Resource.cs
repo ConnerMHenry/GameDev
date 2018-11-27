@@ -34,6 +34,7 @@ public class Resource
                 Min = 5;
                 break;
         }
+        ReCalculateAmount();
     }
 
     public int Max;
