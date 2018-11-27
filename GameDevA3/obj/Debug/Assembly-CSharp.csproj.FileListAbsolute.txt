@@ -667,3 +667,4 @@ C:\Users\mmaxn\Documents\GameDev\GameDevA3\obj\Debug\Assembly-CSharp.csproj.Core
 C:\Users\mmaxn\Documents\GameDev\GameDevA3\obj\Debug\Assembly-CSharp.csproj.CopyComplete
 C:\Users\mmaxn\Documents\GameDev\GameDevA3\obj\Debug\Assembly-CSharp.dll
 C:\Users\mmaxn\Documents\GameDev\GameDevA3\obj\Debug\Assembly-CSharp.pdb
+C:\Users\mmaxn\Documents\GameDev\GameDevA3\obj\Debug\Assembly-CSharp.csprojAssemblyReference.cache

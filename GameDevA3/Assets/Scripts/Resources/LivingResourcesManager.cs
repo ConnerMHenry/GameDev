@@ -15,7 +15,7 @@ public static class LivingResourcesManager {
 	private static int current_water = 0;
 	private static int current_power = 0;
 	private static int UpkeepPerPerson = 1;
-	
+
 	public static bool GetWorkers(int amount)
 	{
 		if (current_people >= amount)
@@ -29,6 +29,67 @@ public static class LivingResourcesManager {
 			return false;
 		}
 	}
+
+	public static bool GetPower(int amount)
+	{
+		if (current_power >= amount)
+		{
+			current_power -= amount;
+			powerText.text = CurrentPowerText();
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
+
+	public static bool GetFood(int amount)
+	{
+		if (current_food >= amount)
+		{
+			current_food -= amount;
+			foodCount.text = CurrentFoodText();
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
+
+	public static bool GetWater(int amount)
+	{
+		if (current_water >= amount)
+		{
+			current_water -= amount;
+			waterCount.text = CurrentWaterText();
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
+
+	public static bool CheckWater(int amount)
+	{
+		return current_water >= amount;
+	}
+	public static bool CheckPower(int amount)
+	{
+		return current_power >= amount;
+	}
+	public static bool CheckFood(int amount)
+	{
+		return current_food >= amount;
+	}
+	public static bool CheckPeople(int amount)
+	{
+		return current_people >= amount;
+	}
+
+
 
 	public static void AddWorkers(int amount)
 	{

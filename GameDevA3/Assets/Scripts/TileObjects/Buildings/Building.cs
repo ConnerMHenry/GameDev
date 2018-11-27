@@ -93,7 +93,7 @@ public class Building : TileObject {
         PeopleRequired = 0;
         PeopleRequired = requiredNeeds.Find((LifeNeeds obj) => obj.providedRequirements == LivingRequirements.People).amount;
 
-        IsProducing = false;
+        IsProducing = PeopleRequired == 0;
     }
 
     public void Update()
@@ -113,11 +113,41 @@ public class Building : TileObject {
             hasResources = ItemBarController.main.AmountOf(need) > 0;
 
             if (!hasResources){
+				Debug.Log("Doesn't have resources");
                 break;
             }
         }
 
-        if (isBuilt && IsProducing && hasResources) {
+		bool hasRequirements = true;
+
+		// if there are resources, check the living
+		foreach (LifeNeeds need in requiredNeeds)
+		{
+			switch (need.providedRequirements)
+			{
+				case LivingRequirements.Energy:
+					Debug.Log("Doesnt have power: " + need.amount);
+					hasRequirements = LivingResourcesManager.CheckPower(need.amount);
+					break;
+				case LivingRequirements.Food:
+					Debug.Log("Doesnt have food: " + need.amount);
+					hasRequirements = LivingResourcesManager.CheckFood(need.amount);
+					break;
+				case LivingRequirements.Water:
+					Debug.Log("Doesnt have water: " + need.amount);
+					hasRequirements = LivingResourcesManager.CheckWater(need.amount);
+					break;
+				default:
+					break;
+			}
+			if (!hasRequirements)
+			{
+				Debug.Log("Doesn't have requirements");
+				break;
+			}
+		}
+
+        if (isBuilt && IsProducing && (hasResources && hasRequirements)) {
             productionTime += Time.deltaTime;
             parentTile.ProgressBar.GetComponent<Slider>().value = productionTime / totalProductionTime;
 
@@ -135,7 +165,44 @@ public class Building : TileObject {
                 foreach(ResourceType need in resourceNeeds) {
                     ItemBarController.main.Add(need, -1);
                 }
-            }
+
+				foreach (LifeNeeds need in requiredNeeds)
+				{
+					switch (need.providedRequirements)
+					{
+						case LivingRequirements.Energy:
+							LivingResourcesManager.GetPower(need.amount);
+							break;
+						case LivingRequirements.Food:
+							LivingResourcesManager.GetFood(need.amount);
+							break;
+						case LivingRequirements.Water:
+							LivingResourcesManager.GetWater(need.amount);
+							break;
+						default:
+							break;
+					}
+				}
+
+				foreach (LifeNeeds need in providedNeeds)
+				{
+					switch (need.providedRequirements)
+					{
+						case LivingRequirements.Energy:
+							LivingResourcesManager.AddPower(need.amount);
+							break;
+						case LivingRequirements.Food:
+							LivingResourcesManager.AddFood(need.amount);
+							break;
+						case LivingRequirements.Water:
+							LivingResourcesManager.AddWater(need.amount);
+							break;
+						default:
+							break;
+					}
+				}
+
+			}
             //Provide the needs to needs manager.
         }
     }   
@@ -146,17 +213,22 @@ public class Building : TileObject {
         parentTile.RemoveProgressBar();
         isBuilt = true;
 
-		foreach(LifeNeeds nedward in providedNeeds)
+		foreach(LifeNeeds need in providedNeeds)
 		{
-			if (nedward.providedRequirements == LivingRequirements.People)
+			if (need.providedRequirements == LivingRequirements.People)
 			{
-				LivingResourcesManager.AddLivingSpace(nedward.amount);
-				LivingResourcesManager.AddWorkers(nedward.amount);
+				LivingResourcesManager.AddLivingSpace(need.amount);
+				LivingResourcesManager.AddWorkers(need.amount);
 			}
 		}
 
         if (parentTile.IsHighlighted) {
             TileInfoController.main.CurrentTile = parentTile;
         }
+
+		if (IsProducing)
+		{
+			parentTile.CreateProgressBar();
+		}
     }
 }

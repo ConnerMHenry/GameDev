@@ -2819,6 +2819,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01a1dcebe866448e18a40fff106a8a25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  testing: 0
 --- !u!4 &659923338
 Transform:
   m_ObjectHideFlags: 0
@@ -2852,33 +2853,48 @@ MonoBehaviour:
       Resources:
       - Resource: {fileID: 114152204868161446, guid: 0383303191d77426698c136fe73cc5c3,
           type: 2}
-        Weight: 20
+        Weight: 19
       - Resource: {fileID: 114570338181888580, guid: 87a52549f1a174d168642c68199da32c,
           type: 2}
-        Weight: 60
+        Weight: 59
+      - Resource: {fileID: 114646733770499068, guid: cac14d229bab6804c8cb440b7683f0a8,
+          type: 2}
+        Weight: 2
     - Biome: 0
       Resources:
       - Resource: {fileID: 114152204868161446, guid: 0383303191d77426698c136fe73cc5c3,
           type: 2}
-        Weight: 80
+        Weight: 78
       - Resource: {fileID: 114570338181888580, guid: 87a52549f1a174d168642c68199da32c,
           type: 2}
         Weight: 20
+      - Resource: {fileID: 114646733770499068, guid: cac14d229bab6804c8cb440b7683f0a8,
+          type: 2}
+        Weight: 2
     - Biome: 2
       Resources:
       - Resource: {fileID: 114570338181888580, guid: 5bffb17bd0b94ef4ba777fd17dc52412,
           type: 2}
-        Weight: 100
+        Weight: 98
+      - Resource: {fileID: 114646733770499068, guid: cac14d229bab6804c8cb440b7683f0a8,
+          type: 2}
+        Weight: 2
     - Biome: 3
       Resources:
       - Resource: {fileID: 114570338181888580, guid: 87a52549f1a174d168642c68199da32c,
           type: 2}
-        Weight: 100
+        Weight: 98
+      - Resource: {fileID: 114646733770499068, guid: cac14d229bab6804c8cb440b7683f0a8,
+          type: 2}
+        Weight: 2
     - Biome: 4
       Resources:
       - Resource: {fileID: 114570338181888580, guid: 9b0142894cc94de4ca04dc809f3351d9,
           type: 2}
-        Weight: 100
+        Weight: 98
+      - Resource: {fileID: 114646733770499068, guid: cac14d229bab6804c8cb440b7683f0a8,
+          type: 2}
+        Weight: 2
   gridXLength: 50
   gridYLength: 50
   xIncrement: 0.605

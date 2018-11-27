@@ -7,6 +7,7 @@ public class PlayButton : MonoBehaviour {
 
 	public void Play()
 	{
+		DebugModeManager.IsTesting = false;
 		SceneManager.LoadScene("SampleScene");
 	}
 }

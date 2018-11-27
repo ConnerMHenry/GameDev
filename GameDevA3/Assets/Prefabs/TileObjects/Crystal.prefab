@@ -48,10 +48,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1105892929372910}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 01c579e0e64e94b41b529a3050b85a72, type: 3}
+  m_Script: {fileID: 11500000, guid: 62319f9f7bff7bb4a9a2c188b3048522, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: Crystal
+  Name: 
   SpriteHolderPrefab: {fileID: 1520646675860446, guid: de11c824fa7f743d0ba3c60c4189c3d9,
     type: 2}
   spriteOptions:
