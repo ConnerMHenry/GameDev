@@ -20,7 +20,7 @@ public class Tree : NaturalResource {
             yCoordinates.Add(y);
         }
 
-        resource = new Resource(ResourceType.Wood);
+        Resource resource = resources.Find((obj) => obj.ResourceType == ResourceType.Wood);
         treeAssets = new List<GameObject>();
 
         int treeAmount = 0;
@@ -88,8 +88,8 @@ public class Tree : NaturalResource {
             treeAssets.Add(spriteHolder);
         }
 
-        MinAmount = resource.Min * treeAmount;
-        MaxAmount = resource.Max * treeAmount;
+        resource.Min = resource.Min * treeAmount;
+        resource.Max = resource.Max * treeAmount;
 
         LayerSprites();
     } 

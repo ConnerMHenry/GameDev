@@ -52,7 +52,13 @@ public class TileInfoController : MonoBehaviour {
         if (tile.ChildObject is NaturalResource) {
             currentResource = (NaturalResource)tile.ChildObject;
             UpdatePeopleAmount();
-            CreateResourceRow(currentResource.resource.ResourceType, currentResource.Amount);
+            foreach (Resource resource in currentResource.resources)
+            {
+                if (resource.Amount != 0)
+                {
+                    CreateResourceRow(resource.ResourceType, resource.Amount);
+                }
+            }
             buildButton.interactable = false;
         }
         else {

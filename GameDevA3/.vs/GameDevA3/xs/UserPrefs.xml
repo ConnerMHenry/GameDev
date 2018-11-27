@@ -1,19 +1,18 @@
 ﻿<Properties StartupConfiguration="{67392072-5577-0663-36B7-256C92BDA1BA}|">
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Resources/ResourceType.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Resources/Resource.cs">
     <Files>
-      <File FileName="Assets/Scripts/TileObjects/Natural Resources/NaturalResource.cs" Line="71" Column="66" />
-      <File FileName="Assets/Scripts/TileObjects/Buildings/Building.cs" Line="128" Column="32" />
-      <File FileName="Assets/Scripts/UI/BuildingWindowController.cs" Line="114" Column="46" />
-      <File FileName="Assets/Scripts/UI/ItemBarController.cs" Line="37" Column="91" />
-      <File FileName="Assets/Scripts/Resources/ResourceType.cs" Line="6" Column="23" />
+      <File FileName="Assets/Scripts/TileObjects/Natural Resources/NaturalResource.cs" Line="90" Column="100" />
+      <File FileName="Assets/Scripts/TileObjects/Natural Resources/Tree.cs" Line="95" Column="7" />
+      <File FileName="Assets/Scripts/UI/TileInfoController.cs" Line="57" Column="91" />
+      <File FileName="Assets/Scripts/Resources/Resource.cs" Line="40" Column="19" />
+      <File FileName="Assets/Scripts/TileObjects/Natural Resources/Rock.cs" Line="11" Column="50" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
       <Breakpoint file="/Users/connerhenry/Projects/GameDev/GameDevA3/Assets/Scripts/UI/BuildingSlot.cs" relfile="Assets/Scripts/UI/BuildingSlot.cs" line="44" column="1" />
-      <Breakpoint file="/Users/connerhenry/Projects/GameDev/GameDevA3/Assets/Scripts/UI/BuildingWindowController.cs" relfile="Assets/Scripts/UI/BuildingWindowController.cs" line="75" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

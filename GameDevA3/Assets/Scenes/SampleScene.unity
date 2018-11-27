@@ -248,7 +248,7 @@ MonoBehaviour:
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 1
+  m_isInputParsingRequired: 0
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -500,11 +500,6 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 152061259}
     m_Modifications:
-    - target: {fileID: 114323037701702902, guid: 7e8ccabea089243c6bc8f8f8ded78d6f,
-        type: 2}
-      propertyPath: spriteBundles.resourceSprites.Array.size
-      value: 8
-      objectReference: {fileID: 0}
     - target: {fileID: 224046657227949250, guid: 7e8ccabea089243c6bc8f8f8ded78d6f,
         type: 2}
       propertyPath: m_LocalPosition.x
@@ -598,50 +593,6 @@ Prefab:
     - target: {fileID: 1631534826033148, guid: 7e8ccabea089243c6bc8f8f8ded78d6f, type: 2}
       propertyPath: m_IsActive
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114323037701702902, guid: 7e8ccabea089243c6bc8f8f8ded78d6f,
-        type: 2}
-      propertyPath: spriteBundles.resourceSprites.Array.data[7].sprite
-      value: 
-      objectReference: {fileID: 21300054, guid: 073a1e03cf80f486ca16e1b80382a08c,
-        type: 3}
-    - target: {fileID: 114323037701702902, guid: 7e8ccabea089243c6bc8f8f8ded78d6f,
-        type: 2}
-      propertyPath: spriteBundles.resourceSprites.Array.data[7].type
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 114323037701702902, guid: 7e8ccabea089243c6bc8f8f8ded78d6f,
-        type: 2}
-      propertyPath: spriteBundles.resourceSprites.Array.data[2].sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 5d2957e01d6b5408eb89578deb5b0339,
-        type: 3}
-    - target: {fileID: 114323037701702902, guid: 7e8ccabea089243c6bc8f8f8ded78d6f,
-        type: 2}
-      propertyPath: spriteBundles.resourceSprites.Array.data[3].sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 42d50ee7af6ef4036813856ff1a81487,
-        type: 3}
-    - target: {fileID: 114323037701702902, guid: 7e8ccabea089243c6bc8f8f8ded78d6f,
-        type: 2}
-      propertyPath: spriteBundles.resourceSprites.Array.data[2].type
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 114323037701702902, guid: 7e8ccabea089243c6bc8f8f8ded78d6f,
-        type: 2}
-      propertyPath: spriteBundles.resourceSprites.Array.data[3].type
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114323037701702902, guid: 7e8ccabea089243c6bc8f8f8ded78d6f,
-        type: 2}
-      propertyPath: spriteBundles.resourceSprites.Array.data[6].sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 052f78f5aa0f8485c94e1d2fffb2939b,
-        type: 3}
-    - target: {fileID: 114323037701702902, guid: 7e8ccabea089243c6bc8f8f8ded78d6f,
-        type: 2}
-      propertyPath: spriteBundles.resourceSprites.Array.data[6].type
-      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7e8ccabea089243c6bc8f8f8ded78d6f, type: 2}
@@ -1204,7 +1155,7 @@ MonoBehaviour:
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 1
+  m_isInputParsingRequired: 0
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -1877,7 +1828,7 @@ MonoBehaviour:
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 1
+  m_isInputParsingRequired: 0
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -2298,7 +2249,7 @@ MonoBehaviour:
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 1
+  m_isInputParsingRequired: 0
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -2454,7 +2405,7 @@ MonoBehaviour:
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 1
+  m_isInputParsingRequired: 0
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -3729,7 +3680,7 @@ MonoBehaviour:
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 1
+  m_isInputParsingRequired: 0
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -4341,7 +4292,7 @@ MonoBehaviour:
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 1
+  m_isInputParsingRequired: 0
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -4572,7 +4523,7 @@ MonoBehaviour:
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 1
+  m_isInputParsingRequired: 0
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -4728,7 +4679,7 @@ MonoBehaviour:
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 1
+  m_isInputParsingRequired: 0
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -5885,7 +5836,7 @@ MonoBehaviour:
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 1
+  m_isInputParsingRequired: 0
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -6179,7 +6130,7 @@ MonoBehaviour:
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 1
+  m_isInputParsingRequired: 0
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -6486,7 +6437,7 @@ MonoBehaviour:
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 1
+  m_isInputParsingRequired: 0
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
