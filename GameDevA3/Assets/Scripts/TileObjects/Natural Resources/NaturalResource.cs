@@ -42,9 +42,6 @@ public abstract class NaturalResource : TileObject {
             }
         }
     }
-    //public int MaxAmount { get; protected set; }
-    //public int MinAmount { get; protected set; }
-    //public int Amount { get; protected set; }
 
     // Asset placement values
 
@@ -68,16 +65,15 @@ public abstract class NaturalResource : TileObject {
 
         PeopleRequired = 1;
 
-        CreateResource();
-        //Amount = Random.Range(MinAmount, MaxAmount);
-
         resources = new List<Resource>();
         foreach(ResourcePossibility possibility in possibleResources) {
             if (Random.value <= possibility.chanceOfOccuring) {
                 resources.Add(new Resource(possibility.type));
             }
         }
-	}
+
+        CreateResource();
+    }
 	
 	// Update is called once per frame
 	void Update() {

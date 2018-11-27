@@ -20,13 +20,13 @@ public class Resource
                 break;
 
             case ResourceType.Iron:
-                Min = 0;
-                Max = 1;
+                Min = 1;
+                Max = 3;
                 break;
 
             case ResourceType.Coal:
-                Min = 0;
-                Max = 1;
+                Min = 1;
+                Max = 5;
                 break;
 
             case ResourceType.Crytsal:

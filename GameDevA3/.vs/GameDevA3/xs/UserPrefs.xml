@@ -1,12 +1,14 @@
 ﻿<Properties StartupConfiguration="{67392072-5577-0663-36B7-256C92BDA1BA}|">
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Resources/Resource.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/ResourceGenerator.cs">
     <Files>
-      <File FileName="Assets/Scripts/TileObjects/Natural Resources/NaturalResource.cs" Line="90" Column="100" />
-      <File FileName="Assets/Scripts/TileObjects/Natural Resources/Tree.cs" Line="95" Column="7" />
-      <File FileName="Assets/Scripts/UI/TileInfoController.cs" Line="57" Column="91" />
-      <File FileName="Assets/Scripts/Resources/Resource.cs" Line="40" Column="19" />
-      <File FileName="Assets/Scripts/TileObjects/Natural Resources/Rock.cs" Line="11" Column="50" />
+      <File FileName="Assets/Scripts/TileObjects/Natural Resources/NaturalResource.cs" Line="44" Column="6" />
+      <File FileName="Assets/Scripts/TileObjects/Natural Resources/Tree.cs" Line="23" Column="91" />
+      <File FileName="Assets/Scripts/UI/TileInfoController.cs" Line="59" Column="71" />
+      <File FileName="Assets/Scripts/Resources/Resource.cs" Line="3" Column="1" />
+      <File FileName="Assets/Scripts/TileObjects/Natural Resources/Rock.cs" Line="11" Column="93" />
+      <File FileName="Assets/Scripts/WorldCreator.cs" Line="95" Column="77" />
+      <File FileName="Assets/Scripts/ResourceGenerator.cs" Line="26" Column="23" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
@@ -16,6 +18,5 @@
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp-Editor PreferredExecutionTarget="Unity.Editor" />
   <MultiItemStartupConfigurations />
 </Properties>

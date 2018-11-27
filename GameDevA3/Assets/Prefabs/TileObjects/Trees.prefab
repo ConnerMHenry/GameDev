@@ -51,9 +51,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8219fee384e8a4eddb2f6c47001db9aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Name: 
   SpriteHolderPrefab: {fileID: 1520646675860446, guid: de11c824fa7f743d0ba3c60c4189c3d9,
     type: 2}
   spriteOptions:
   - {fileID: 21300266, guid: 073a1e03cf80f486ca16e1b80382a08c, type: 3}
   - {fileID: 21300264, guid: 073a1e03cf80f486ca16e1b80382a08c, type: 3}
-  resource: {fileID: 0}
+  possibleResources:
+  - type: 0
+    chanceOfOccuring: 1
