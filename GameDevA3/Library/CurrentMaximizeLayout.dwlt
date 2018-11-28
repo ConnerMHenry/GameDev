@@ -23,7 +23,7 @@ MonoBehaviour:
   m_MinSize: {x: 509, y: 471}
   m_MaxSize: {x: 14004, y: 14021}
   vertical: 0
-  controlID: 1879
+  controlID: 2029
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -126,7 +126,7 @@ MonoBehaviour:
   m_MinSize: {x: 232, y: 471}
   m_MaxSize: {x: 10002, y: 14021}
   vertical: 1
-  controlID: 1766
+  controlID: 2030
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -145,8 +145,8 @@ MonoBehaviour:
     y: 0
     width: 1069
     height: 460
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 2}
   m_Panes:
   - {fileID: 5}
@@ -295,19 +295,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts/TileObjects/Buildings
+    - Assets/Scripts/UI
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts/TileObjects/Buildings
+  - Assets/Scripts/UI
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\mmaxn\Documents\GameDev\GameDevA3
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 87}
-    m_SelectedIDs: 622b0000
-    m_LastClickedID: 11106
+    scrollPos: {x: 0, y: 147}
+    m_SelectedIDs: 82310000
+    m_LastClickedID: 12674
     m_ExpandedIDs: 000000008c2a0000242f0000462f0000722f0000a4300000d23100007432000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -361,9 +361,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: e6fbffff
-    m_LastClickedInstanceID: -1050
-    m_HadKeyboardFocusLastEvent: 0
+    m_SelectedInstanceIDs: 08520000
+    m_LastClickedInstanceID: 21000
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c62300000a0c0000c009000000000000ae2b0000dc2d0000722a00007a3b0000743b0000ce2c0000d23f0000ea2a0000d03a00002638000022380000a02c0000b22e0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -436,10 +436,10 @@ MonoBehaviour:
     y: 0
     width: 467
     height: 731
-  m_MinSize: {x: 277, y: 271}
-  m_MaxSize: {x: 4002, y: 8021}
+  m_MinSize: {x: 277, y: 292}
+  m_MaxSize: {x: 4002, y: 8042}
   vertical: 1
-  controlID: 1880
+  controlID: 2016
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -492,9 +492,9 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: e6fbffff
-    m_LastClickedID: -1050
-    m_ExpandedIDs: e8aafeffe4fbffffe6fbffff000000001c33000048330000f634000062350000
+    m_SelectedIDs: 08520000
+    m_LastClickedID: 21000
+    m_ExpandedIDs: 80bffbff2ec0fbff80c2fbff90c2fbff46ccfbfff4ccfbff42cefbff56cffbffe8aafeffe4fbffffe6fbffff000000001c33000048330000f634000062350000c2510000ee51000010520000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
