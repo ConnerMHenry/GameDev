@@ -20,10 +20,10 @@ MonoBehaviour:
     y: 30
     width: 1536
     height: 731
-  m_MinSize: {x: 509, y: 492}
-  m_MaxSize: {x: 14004, y: 14042}
+  m_MinSize: {x: 509, y: 471}
+  m_MaxSize: {x: 14004, y: 14021}
   vertical: 0
-  controlID: 13432
+  controlID: 1879
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -123,10 +123,10 @@ MonoBehaviour:
     y: 0
     width: 1069
     height: 731
-  m_MinSize: {x: 232, y: 492}
-  m_MaxSize: {x: 10002, y: 14042}
+  m_MinSize: {x: 232, y: 471}
+  m_MaxSize: {x: 10002, y: 14021}
   vertical: 1
-  controlID: 13433
+  controlID: 1766
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -145,8 +145,8 @@ MonoBehaviour:
     y: 0
     width: 1069
     height: 460
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 2}
   m_Panes:
   - {fileID: 5}
@@ -295,20 +295,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts/UI
+    - Assets/Scripts/TileObjects/Buildings
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts/UI
+  - Assets/Scripts/TileObjects/Buildings
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\mmaxn\Documents\GameDev\GameDevA3
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 71}
-    m_SelectedIDs: 14310000
-    m_LastClickedID: 12564
-    m_ExpandedIDs: 00000000862a0000b82e0000da2e0000042f00003630000064310000fe31000000ca9a3b
+    scrollPos: {x: 0, y: 87}
+    m_SelectedIDs: 622b0000
+    m_LastClickedID: 11106
+    m_ExpandedIDs: 000000008c2a0000242f0000462f0000722f0000a4300000d23100007432000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -336,7 +336,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000862a0000b82e0000da2e0000042f00003630000064310000fe31000000ca9a3b
+    m_ExpandedIDs: 000000008c2a0000242f0000462f0000722f0000a4300000d23100007432000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -380,7 +380,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 0}
+      m_ClientGUIView: {fileID: 6}
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
       m_InstanceID: 0
@@ -436,10 +436,10 @@ MonoBehaviour:
     y: 0
     width: 467
     height: 731
-  m_MinSize: {x: 277, y: 292}
-  m_MaxSize: {x: 4002, y: 8042}
+  m_MinSize: {x: 277, y: 271}
+  m_MaxSize: {x: 4002, y: 8021}
   vertical: 1
-  controlID: 13419
+  controlID: 1880
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -494,7 +494,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: e6fbffff
     m_LastClickedID: -1050
-    m_ExpandedIDs: c21affffe4fbffffe6fbffff00000000243a0000d4410000044200005c420000184a0000de4a0000404b0000664b0000ca5200001e5300003a530000f2530000185400000470000018b1000044b100005eb1000066b40000
+    m_ExpandedIDs: e8aafeffe4fbffffe6fbffff000000001c33000048330000f634000062350000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -514,6 +514,7 @@ MonoBehaviour:
     m_SearchString: 
   m_ExpandedScenes:
   - SampleScene
+  - MainMenu
   m_CurrenRootInstanceID: 0
   m_LockTracker:
     m_IsLocked: 0

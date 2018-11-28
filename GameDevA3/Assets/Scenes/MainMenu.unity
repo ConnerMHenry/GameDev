@@ -460,11 +460,11 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: Buildrly is a game of gathering and using natural resources. Assign workers
+  m_text: "Buildrly is a game of gathering and using natural resources. Assign workers
     to work on gathering trees, rocks, and iron. Once you have some resources gathered,
     you can start developing tiles with buildings. Buildings can house more workers,
-    provide renewable resources, and further refine your resources into more advanced
-    forms. Have fun to win!
+    provide renewable resources, and further refine \nyour resources into more advanced
+    forms. Have fun to win!\n\nFor more details, read the REadMe file."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dda31c1df1684400bb2dbffd0021e436, type: 2}
   m_sharedMaterial: {fileID: 21597585108122570, guid: dda31c1df1684400bb2dbffd0021e436,
@@ -492,7 +492,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 25.95
+  m_fontSize: 22.2
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -533,19 +533,19 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 268289696}
-    characterCount: 346
+    characterCount: 388
     spriteCount: 0
-    spaceCount: 53
-    wordCount: 54
+    spaceCount: 62
+    wordCount: 61
     linkCount: 0
-    lineCount: 8
+    lineCount: 10
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 1
+  m_havePropertiesChanged: 0
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 1
+  m_isInputParsingRequired: 0
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -2736,11 +2736,11 @@ MonoBehaviour:
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 1
+  m_havePropertiesChanged: 0
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 1
+  m_isInputParsingRequired: 0
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:

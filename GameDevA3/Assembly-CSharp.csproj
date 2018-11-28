@@ -109,6 +109,8 @@
     <Compile Include="Assets\Scripts\Resources\LivingResourcesManager.cs" />
     <Compile Include="Assets\Scripts\Resources\Resource.cs" />
     <Compile Include="Assets\Scripts\Resources\ResourceType.cs" />
+    <Compile Include="Assets\Scripts\SFXManager.cs" />
+    <Compile Include="Assets\Scripts\SFXPlayer.cs" />
     <Compile Include="Assets\Scripts\Tile.cs" />
     <Compile Include="Assets\Scripts\TileObjects\Buildings\Building.cs" />
     <Compile Include="Assets\Scripts\TileObjects\Buildings\Commodity.cs" />

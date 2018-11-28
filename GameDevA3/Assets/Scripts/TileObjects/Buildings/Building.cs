@@ -86,6 +86,7 @@ public class Building : TileObject {
         isBuilding = true;
         buildingAnimator.Play("BuildingAnimation");
         parentTile.CreateProgressBar();
+		SFXManager.PlayEffect(totalConstructionTime);
     }
 
     public void Start()
